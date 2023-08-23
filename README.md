@@ -1,2 +1,2 @@
-# rhtap-release-data
-Repository to store data related to on premise product releases
+# rhtap-ec-policy
+Repository to store our Enterprise Contract Policy data for RHTAP

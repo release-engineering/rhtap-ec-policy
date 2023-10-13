@@ -1,0 +1,17 @@
+{
+  "name": "@release-engineering/ec-data-extension",
+  "version": "1.0.0",
+  "description": "Antora extension for rendering Enterprise Contract data",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/release-engineering/rhtap-ec-policy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "18"
+  }
+}

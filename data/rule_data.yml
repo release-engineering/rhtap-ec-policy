@@ -6,6 +6,9 @@ rule_data:
   - registry.access.redhat.com/
   - registry.redhat.io/
   - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+  # Temporary prefix to address https://github.com/kubernetes/kubernetes/issues/121197
+  # To be removed once go-toolset:1.20 is released with RHEL 9.3
+  - docker.io/library/golang
 
   allowed_step_image_registry_prefixes:
   - quay.io/redhat-appstudio/

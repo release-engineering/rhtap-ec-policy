@@ -107,3 +107,6 @@ rule_data:
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__disallowed_inherited_labels
   fbc_disallowed_inherited_labels: []
 
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
+  informative_tests:
+  - sast-snyk-check

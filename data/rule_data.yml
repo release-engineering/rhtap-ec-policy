@@ -110,3 +110,19 @@ rule_data:
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
   - sast-snyk-check
+
+  # Basic rule of no releases on Fridays/Weekends
+  disallowed_weekdays:
+  - friday
+  - saturday
+  - sunday
+
+  # Don't allow releases during winter shutdown, friday-weekend already blocked
+  disallowed_dates:
+  - 2023-12-21
+  - 2023-12-25
+  - 2023-12-26
+  - 2023-12-27
+  - 2023-12-28
+  - 2024-01-01
+  

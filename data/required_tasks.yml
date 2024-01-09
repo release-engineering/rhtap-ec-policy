@@ -21,7 +21,7 @@ pipeline-required-tasks:
   docker:
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
-        - buildah
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
         - clair-scan
         - clamav-scan
         - deprecated-image-check
@@ -49,7 +49,7 @@ pipeline-required-tasks:
   generic:
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
-        - buildah
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
         - clair-scan
         - clamav-scan
         - deprecated-image-check

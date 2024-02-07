@@ -97,6 +97,10 @@ rule_data:
   - name: io.k8s.display-name
   - name: io.openshift.tags
   - name: summary
+  - name: name
+    effective_on: "2024-04-13T00:00:00Z"
+  - name: com.redhat.component
+    effective_on: "2024-04-13T00:00:00Z"
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
   fbc_required_labels: []

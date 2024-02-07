@@ -98,6 +98,13 @@ rule_data:
   - name: io.openshift.tags
   - name: summary
 
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__optional_disallowed_inherited_labels
+  # These will eventually move to disallowed_inherited_labels. They are first added here so they
+  # produce a warning. This gives users some time to comply to the new requirement.
+  optional_disallowed_inherited_labels:
+  - name: name
+  - name: com.redhat.component
+
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
   fbc_required_labels: []
 

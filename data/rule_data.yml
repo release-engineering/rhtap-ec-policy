@@ -11,11 +11,7 @@ rule_data:
   - quay.io/redhat-appstudio/
   - registry.access.redhat.com/
   - registry.redhat.io/
-  # Due to https://issues.redhat.com/browse/OCPBUGS-8428 images from registry.redhat.io may
-  # sometimes be reported as coming from the repository below. This is a temporary workaround
-  # until the JIRA is resolved.
-  - quay.io/openshift-release-dev/ocp-v4.0-art-dev
-  # Allow prelight images to be used in rhtap / konflux 
+  # Allow prelight images to be used in rhtap / konflux
   # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
   - quay.io/opdev/preflight
 

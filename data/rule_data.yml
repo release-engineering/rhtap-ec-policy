@@ -15,6 +15,9 @@ rule_data:
   # sometimes be reported as coming from the repository below. This is a temporary workaround
   # until the JIRA is resolved.
   - quay.io/openshift-release-dev/ocp-v4.0-art-dev
+  # Allow prelight images to be used in rhtap / konflux 
+  # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
+  - quay.io/opdev/preflight
 
   allowed_java_component_sources:
   - redhat

@@ -5,16 +5,12 @@ pipeline-required-tasks:
     - effective_on: "2023-08-31T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
-        - clair-scan
-        - clamav-scan
         - deprecated-image-check
         - fbc-related-image-check
         - fbc-validation
         - git-clone
         - init
-        - prefetch-dependencies
         - inspect-image
-        - sast-snyk-check
         - sbom-json-check
         - show-sbom
         - summary

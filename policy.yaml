@@ -1,0 +1,15 @@
+---
+name: verify-data
+description: >-
+  This policy config is responsible for verifying the integrity of the data defined in this
+  repository.
+sources:
+  - policy:
+      - github.com/enterprise-contract/ec-policies//policy/lib
+      - github.com/enterprise-contract/ec-policies//policy/release
+    data:
+      - $PWD/data/rule_data.yml
+      - $PWD/data/required_tasks.yml
+    config:
+      include:
+        - '@policy_data'

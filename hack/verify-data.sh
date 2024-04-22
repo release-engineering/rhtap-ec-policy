@@ -7,7 +7,7 @@ set -o nounset
 cd "$(git root)"
 
 # The EC policy does not allow for relative paths. For this reason, we use envsubst to replace
-# occurrences of $PWD with the actual working directoy. The result is a temporary policy file
+# occurrences of $PWD with the actual working directory. The result is a temporary policy file
 # with absolute paths.
 # NOTE: An alternative to saving the modified policy to a temporary file is to use a heredoc, e.g.
 # `ec validate input --file <(...)` However, when doing so, the file name is something like

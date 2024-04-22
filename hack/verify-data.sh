@@ -19,7 +19,7 @@ POLICY_YAML="$(mktemp --suffix '.yaml')"
 ec validate policy --policy "${POLICY_YAML}"
 echo '✅ Policy config validated'
 
-# The command requires --file to be used at least one. This sets the input to be verified by the
+# The command requires --file to be used at least once. This sets the input to be verified by the
 # policy rules. However, here we are verifying the data sources which does not require an input.
 # So we use a dummy input file instead.
 ec validate input --policy "${POLICY_YAML}" --output yaml --file <(echo '{}') | yq .

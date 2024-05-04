@@ -11,7 +11,6 @@ pipeline-required-tasks:
         - git-clone
         - init
         - inspect-image
-        - sbom-json-check
         - show-sbom
         - summary
   docker:
@@ -25,7 +24,6 @@ pipeline-required-tasks:
         - init
         - prefetch-dependencies
         - sast-snyk-check
-        - sbom-json-check
         - show-sbom
         - source-build
         - summary
@@ -53,7 +51,6 @@ pipeline-required-tasks:
         - init
         - prefetch-dependencies
         - sast-snyk-check
-        - sbom-json-check
         - show-sbom
         - source-build
         - summary
@@ -81,7 +78,6 @@ pipeline-required-tasks:
         - prefetch-dependencies
         - s2i-java
         - sast-snyk-check
-        - sbom-json-check
         - show-sbom
         - source-build
         - summary
@@ -109,7 +105,6 @@ pipeline-required-tasks:
         - prefetch-dependencies
         - s2i-nodejs
         - sast-snyk-check
-        - sbom-json-check
         - show-sbom
         - source-build
         - summary

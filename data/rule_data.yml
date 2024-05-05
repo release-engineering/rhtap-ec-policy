@@ -9,6 +9,7 @@ rule_data:
 
   allowed_step_image_registry_prefixes:
   - quay.io/redhat-appstudio/
+  - quay.io/konflux-ci/
   - registry.access.redhat.com/
   - registry.redhat.io/
   # Allow prelight images to be used in rhtap / konflux

@@ -159,3 +159,34 @@ rule_data:
     format: semverv
     # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
     min: v0.2.0
+
+  # No releases on Fridays and weekends
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__weekday_restriction
+  disallowed_weekdays:
+  - friday
+  - saturday
+  - sunday
+
+  # No releases during year-end shutdown
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__date_restriction
+  disallowed_dates:
+  # EOY 2024
+  - 2024-12-24
+  - 2024-12-25
+  - 2024-12-26
+  - 2024-12-27
+  - 2024-12-28
+  - 2024-12-29
+  - 2024-12-30
+  - 2024-12-31
+  - 2025-01-01
+  # EOY 2025
+  - 2025-12-24
+  - 2025-12-25
+  - 2025-12-26
+  - 2025-12-27
+  - 2025-12-28
+  - 2025-12-29
+  - 2025-12-30
+  - 2025-12-31
+  - 2026-01-01

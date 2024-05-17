@@ -2,6 +2,16 @@
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 pipeline-required-tasks:
   fbc:
+    - effective_on: "2024-06-17T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - deprecated-image-check
+        - fbc-related-image-check
+        - fbc-validation
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - inspect-image
+        - show-sbom
     - effective_on: "2023-08-31T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
@@ -14,6 +24,18 @@ pipeline-required-tasks:
         - show-sbom
         - summary
   docker:
+    - effective_on: "2024-06-17T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - show-sbom
+        - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
@@ -26,21 +48,20 @@ pipeline-required-tasks:
         - sast-snyk-check
         - show-sbom
         - source-build
-        - summary
-    - effective_on: "2023-11-11T00:00:00Z"
-      tasks:
-        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
-        - clair-scan
-        - clamav-scan
-        - deprecated-image-check
-        - git-clone
-        - init
-        - prefetch-dependencies
-        - sast-snyk-check
-        - sbom-json-check
-        - show-sbom
         - summary
   generic:
+    - effective_on: "2024-06-17T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - show-sbom
+        - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
@@ -53,21 +74,20 @@ pipeline-required-tasks:
         - sast-snyk-check
         - show-sbom
         - source-build
-        - summary
-    - effective_on: "2023-08-31T00:00:00Z"
-      tasks:
-        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
-        - clair-scan
-        - clamav-scan
-        - deprecated-image-check
-        - git-clone
-        - init
-        - prefetch-dependencies
-        - sast-snyk-check
-        - sbom-json-check
-        - show-sbom
         - summary
   java:
+    - effective_on: "2024-06-17T00:00:00Z"
+      tasks:
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - s2i-java
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - show-sbom
+        - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
         - clair-scan
@@ -80,21 +100,20 @@ pipeline-required-tasks:
         - sast-snyk-check
         - show-sbom
         - source-build
-        - summary
-    - effective_on: "2023-08-31T00:00:00Z"
-      tasks:
-        - clair-scan
-        - clamav-scan
-        - deprecated-image-check
-        - git-clone
-        - init
-        - prefetch-dependencies
-        - s2i-java
-        - sast-snyk-check
-        - sbom-json-check
-        - show-sbom
         - summary
   nodejs:
+    - effective_on: "2024-06-17T00:00:00Z"
+      tasks:
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - s2i-nodejs
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - show-sbom
+        - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
         - clair-scan
@@ -107,23 +126,19 @@ pipeline-required-tasks:
         - sast-snyk-check
         - show-sbom
         - source-build
-        - summary
-    - effective_on: "2023-08-31T00:00:00Z"
-      tasks:
-        - clair-scan
-        - clamav-scan
-        - deprecated-image-check
-        - git-clone
-        - init
-        - prefetch-dependencies
-        - s2i-nodejs
-        - sast-snyk-check
-        - sbom-json-check
-        - show-sbom
         - summary
 
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 required-tasks:
+  - effective_on: "2024-06-17T00:00:00Z"
+    tasks:
+      - clair-scan
+      - clamav-scan
+      - [git-clone, git-clone-oci-ta]
+      - init
+      - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+      - [sast-snyk-check, sast-snyk-check-oci-ta]
+      - [source-build, source-build-oci-ta]
   - effective_on: "2023-12-31T00:00:00Z"
     tasks:
       - clair-scan
@@ -133,13 +148,4 @@ required-tasks:
       - prefetch-dependencies
       - sast-snyk-check
       - source-build
-      - summary
-  - effective_on: "2023-08-31T00:00:00Z"
-    tasks:
-      - clair-scan
-      - clamav-scan
-      - git-clone
-      - init
-      - prefetch-dependencies
-      - sast-snyk-check
       - summary

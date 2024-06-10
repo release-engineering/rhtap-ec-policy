@@ -161,6 +161,12 @@ rule_data:
     # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
     min: v0.2.0
 
+  # No binary python deps
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#sbom_cyclonedx__disallowed_package_attributes
+  disallowed_attributes:
+    - name: cachi2:pip:package:binary
+      value: "true"
+
   # No releases on Fridays and weekends
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__weekday_restriction
   disallowed_weekdays:

@@ -115,6 +115,7 @@ rule_data:
   informative_tests:
   - sast-snyk-check
   - sast-snyk-check-oci-ta
+  - ecosystem-cert-preflight-checks
 
   disallowed_packages:
   # Disallow hashicorp packages with restrictive licenses.

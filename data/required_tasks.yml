@@ -4,7 +4,7 @@ pipeline-required-tasks:
   fbc:
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
-        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - deprecated-image-check
         - fbc-related-image-check
         - fbc-validation
@@ -26,7 +26,7 @@ pipeline-required-tasks:
   docker:
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
-        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - clair-scan
         - clamav-scan
         - deprecated-image-check
@@ -52,7 +52,7 @@ pipeline-required-tasks:
   generic:
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
-        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta]
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - clair-scan
         - clamav-scan
         - deprecated-image-check

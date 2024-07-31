@@ -1,5 +1,0 @@
-name: rhtap-policy
-version: ~
-title: Red Hat policy
-nav:
-- modules/ROOT/nav.adoc

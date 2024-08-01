@@ -211,3 +211,7 @@ rule_data:
   - features.operators.openshift.io/token-auth-aws
   - features.operators.openshift.io/token-auth-azure
   - features.operators.openshift.io/token-auth-gcp
+
+  disallowed_platform_patterns:
+  - .*root.*
+

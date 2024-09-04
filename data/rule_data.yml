@@ -215,3 +215,8 @@ rule_data:
   disallowed_platform_patterns:
   - .*root.*
 
+  # List of keys: https://access.redhat.com/security/team/key
+  allowed_rpm_signature_keys:
+  # release key 2
+  - 199e2f91fd431d51
+

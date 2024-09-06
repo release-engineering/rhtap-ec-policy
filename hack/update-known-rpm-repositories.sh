@@ -4,7 +4,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-cd "$(git root)"
+cd "$(git rev-parse --show-toplevel)"
 
 BASE_URL='https://access.redhat.com/security/data/meta/v1/repository-to-cpe.json'
 

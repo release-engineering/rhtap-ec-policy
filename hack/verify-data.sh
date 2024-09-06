@@ -4,7 +4,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-cd "$(git root)"
+cd "$(git rev-parse --show-toplevel)"
 
 # The EC policy does not allow for relative paths. For this reason, we use envsubst to replace
 # occurrences of $PWD with the actual working directory. The result is a temporary policy file

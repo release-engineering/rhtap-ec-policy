@@ -8,8 +8,7 @@ sources:
       - github.com/enterprise-contract/ec-policies//policy/lib
       - github.com/enterprise-contract/ec-policies//policy/release
     data:
-      - $PWD/data/rule_data.yml
-      - $PWD/data/required_tasks.yml
+      - $PWD/data
     config:
       include:
         - '@policy_data'

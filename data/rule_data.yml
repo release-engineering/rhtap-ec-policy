@@ -78,6 +78,8 @@ rule_data:
       Generally one of git, hg, svn, bzr, cvs
   - name: vendor
     description: Name of the vendor.
+    values:
+    - 'Red Hat, Inc.'
   - name: version
     description: Version of the image.
 

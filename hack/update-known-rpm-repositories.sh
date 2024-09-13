@@ -26,5 +26,5 @@ curl -L "${BASE_URL}" | \
     yq '.data |
         [to_entries[].key] as $repos |
         $repos + env(EXTRAS) | sort as $repos |
-        {"known_rpm_repositories": $repos} |
+        {"rule_data": {"known_rpm_repositories": $repos}} |
         . head_comment=env(COMMENT)' > data/known_rpm_repositories.yml

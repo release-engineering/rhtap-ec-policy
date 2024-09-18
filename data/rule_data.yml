@@ -121,7 +121,7 @@ rule_data:
 
   disallowed_packages:
   # Disallow hashicorp packages with restrictive licenses.
-  - purl: pkg:golang/github.com/hashicorp/terraform
+  - purl: pkg:golang/github.com/hashicorp/terraform#*
     format: semverv
     # https://github.com/hashicorp/terraform/blob/91488b334e230398765438dce7e90b7db9af0dac/LICENSE#L7
     min: v1.6.0
@@ -129,37 +129,45 @@ rule_data:
     format: semverv
     # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
     min: v1.17.0
-  - purl: pkg:golang/github.com/hashicorp/vault
+  - purl: pkg:golang/github.com/hashicorp/consul#envoyextensions
+    format: semverv
+    # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
+    min: v1.17.0
+  - purl: pkg:golang/github.com/hashicorp/consul#troubleshoot
+    format: semverv
+    # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
+    min: v1.17.0
+  - purl: pkg:golang/github.com/hashicorp/vault#*
     format: semverv
     # https://github.com/hashicorp/vault/blob/8a46bee76887523a006410d1e865f5365e709851/LICENSE#L7
     min: v1.15.0
-  - purl: pkg:golang/github.com/hashicorp/vagrant
+  - purl: pkg:golang/github.com/hashicorp/vagrant#*
     format: semverv
     # https://github.com/hashicorp/vagrant/blob/ac6374cd11a51b6992a5dc981bf617db74b4ca7d/LICENSE#L7
     # Actually 2.4.1.dev but that's not a valid semver. This could be interpreted as the pre-release
     # version of 2.4.1. In an abundance of caution, restrict starting at the previous patch release.
     min: v2.4.0
-  - purl: pkg:golang/github.com/hashicorp/nomad
+  - purl: pkg:golang/github.com/hashicorp/nomad#*
     format: semverv
     # https://github.com/hashicorp/nomad/blob/340c9ebd4755c0ab2325aa92c243b344d7956db3/LICENSE#L7
     min: v1.7.0
-  - purl: pkg:golang/github.com/hashicorp/packer
+  - purl: pkg:golang/github.com/hashicorp/packer#*
     format: semverv
     # https://github.com/hashicorp/packer/blob/2241b1fba7253732fdb59284c57b376ae8ad0dff/LICENSE#L7
     min: v1.10.0
-  - purl: pkg:golang/github.com/hashicorp/waypoint
+  - purl: pkg:golang/github.com/hashicorp/waypoint#*
     format: semverv
     # https://github.com/hashicorp/waypoint/blob/b81cf848b44f57b95cb2e9766839582cc625d9c2/LICENSE#L7C40-L7C46
     min: v0.12.0
-  - purl: pkg:golang/github.com/hashicorp/boundary
+  - purl: pkg:golang/github.com/hashicorp/boundary#*
     format: semverv
     # https://github.com/hashicorp/boundary/blob/99529108280ffd55ceefa3f6375a2e57ebeb6a33/LICENSE#L7
     min: v0.14.0
-  - purl: pkg:golang/github.com/hashicorp/vault-csi-provider
+  - purl: pkg:golang/github.com/hashicorp/vault-csi-provider#*
     format: semverv
     # https://github.com/hashicorp/vault-csi-provider/blob/d1c8c8c5b29e2e15ecf66fb9d2823b9fe84051b4/LICENSE#L7C56-L7C56
     min: v1.4.1
-  - purl: pkg:golang/github.com/hashicorp/vault-secrets-operator
+  - purl: pkg:golang/github.com/hashicorp/vault-secrets-operator#*
     format: semverv
     # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
     min: v0.2.0

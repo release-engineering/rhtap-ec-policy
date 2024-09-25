@@ -6,6 +6,7 @@ rule_data:
   - registry.access.redhat.com/
   - registry.redhat.io/
   - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+  - nvcr.io/nvidia/cuda
 
   allowed_step_image_registry_prefixes:
   - quay.io/redhat-appstudio/

@@ -222,9 +222,3 @@ rule_data:
   # release key 2
   - 199e2f91fd431d51
 
-  # No packages with externalReferences of type distribution
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#sbom_cyclonedx__allowed_package_external_references
-  allowed_external_references:
-  - type: "distribution"
-    url: "^$"
-

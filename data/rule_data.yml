@@ -129,6 +129,9 @@ rule_data:
     format: semverv
     # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
     min: v1.17.0
+    exceptions:
+      # The api submodule has a different license.
+      - subpath: api
   - purl: pkg:golang/github.com/hashicorp/vault
     format: semverv
     # https://github.com/hashicorp/vault/blob/8a46bee76887523a006410d1e865f5365e709851/LICENSE#L7

@@ -16,6 +16,26 @@ BASE_URL='https://access.redhat.com/security/data/meta/v1/repository-to-cpe.json
 #   ]'
 # Having a comma on the last item is not necessarily valid JSON, but yq handles it well.
 export EXTRAS='[
+    "ubi-8-baseos-rpms",
+    "ubi-8-baseos-debug-rpms",
+    "ubi-8-baseos-source",
+    "ubi-8-appstream-rpms",
+    "ubi-8-appstream-debug-rpms",
+    "ubi-8-appstream-source",
+    "ubi-8-codeready-builder-rpms",
+    "ubi-8-codeready-builder",
+    "ubi-8-codeready-builder-debug-rpms",
+    "ubi-8-codeready-builder-source",
+    "ubi-9-baseos-rpms",
+    "ubi-9-baseos-debug-rpms",
+    "ubi-9-baseos-source",
+    "ubi-9-appstream-rpms",
+    "ubi-9-appstream-debug-rpms",
+    "ubi-9-appstream-source",
+    "ubi-9-codeready-builder-rpms",
+    "ubi-9-codeready-builder",
+    "ubi-9-codeready-builder-debug-rpms",
+    "ubi-9-codeready-builder-source",
 ]'
 
 export COMMENT='

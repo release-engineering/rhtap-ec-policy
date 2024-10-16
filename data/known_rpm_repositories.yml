@@ -2315,7 +2315,6 @@ rule_data:
     - "rhacs-4-for-rhel-8-x86_64-source-rpms"
     - "rhbk-textonly-1-for-middleware-rpms"
     - "rhboac-hwt-textonly-1-for-middleware-rpms"
-    - "rhbop-textonly-1-for-middleware-rpms"
     - "rhceph-4-mon-for-rhel-8-ppc64le-debug-rpms"
     - "rhceph-4-mon-for-rhel-8-ppc64le-rpms"
     - "rhceph-4-mon-for-rhel-8-ppc64le-source-rpms"

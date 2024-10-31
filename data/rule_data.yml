@@ -229,3 +229,8 @@ rule_data:
   # release key 2
   - 199e2f91fd431d51
 
+  # Thresholds are one day shorter than the time periods for grade C in:
+  # https://access.redhat.com/articles/2803031
+  cve_leeway:
+    critical: 6
+    high: 29

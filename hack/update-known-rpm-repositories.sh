@@ -48,6 +48,10 @@ export EXTRAS='[
     "rhel-10-appstream-source",
     "rhel-10-rt",
     "rhel-10-rt-source",
+    "baseos",
+    "baseos-sources",
+    "appstream",
+    "appstream-sources",
 ]'
 
 export COMMENT='

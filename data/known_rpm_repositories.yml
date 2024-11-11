@@ -515,6 +515,7 @@ rule_data:
     - "application-interconnect-1-for-rhel-9-x86_64-source-rpms"
     - "appstream"
     - "appstream-sources"
+
     - "automation-hub-4.2-for-rhel-8-x86_64-debug-rpms"
     - "automation-hub-4.2-for-rhel-8-x86_64-rpms"
     - "automation-hub-4.2-for-rhel-8-x86_64-source-rpms"

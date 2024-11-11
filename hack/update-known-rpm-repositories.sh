@@ -36,6 +36,22 @@ export EXTRAS='[
     "ubi-9-codeready-builder",
     "ubi-9-codeready-builder-debug-rpms",
     "ubi-9-codeready-builder-source",
+    "rhel-9-base",
+    "rhel-9-base-source",
+    "rhel-9-appstream",
+    "rhel-9-appstream-source",
+    "rhel-9-rt",
+    "rhel-9-rt-source",
+    "rhel-10-base",
+    "rhel-10-base-source",
+    "rhel-10-appstream",
+    "rhel-10-appstream-source",
+    "rhel-10-rt",
+    "rhel-10-rt-source",
+    "baseos",
+    "baseos-sources",
+    "appstream",
+    "appstream-sources",
 ]'
 
 export COMMENT='

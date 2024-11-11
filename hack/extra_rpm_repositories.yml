@@ -36,3 +36,4 @@ extras:
   -  "baseos-sources"
   -  "appstream"
   -  "appstream-sources"
+  -  "codeready-builder"

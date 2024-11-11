@@ -759,6 +759,7 @@ rule_data:
     - "cnv-4.9-for-rhel-8-x86_64-debug-rpms"
     - "cnv-4.9-for-rhel-8-x86_64-rpms"
     - "cnv-4.9-for-rhel-8-x86_64-source-rpms"
+    - "codeready-builder"
     - "codeready-builder-beta-for-rhel-10-aarch64-debug-rpms"
     - "codeready-builder-beta-for-rhel-10-aarch64-rpms"
     - "codeready-builder-beta-for-rhel-10-aarch64-source-rpms"

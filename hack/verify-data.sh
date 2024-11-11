@@ -6,6 +6,18 @@ set -o nounset
 
 cd "$(git rev-parse --show-toplevel)"
 
+# Verify known_rpm_repositories.yml has been updated with entries from extra_rpm_repositories.yml.
+outdated="$(comm -13 \
+    <(yq .rule_data.known_rpm_repositories "data/known_rpm_repositories.yml" | sort -u) \
+    <(yq .extras "hack/extra_rpm_repositories.yml" | sort -u))"
+if [[ -n "${outdated}" ]]; then
+    echo "Out of date items found:"
+    echo "${outdated}"
+    echo "❌ Run hack/update-known-rpm-repositories.sh"
+    exit 1
+fi
+echo '✅ data/known_rpm_repositories.yml has expected extras'
+
 # The EC policy does not allow for relative paths. For this reason, we use envsubst to replace
 # occurrences of $PWD with the actual working directory. The result is a temporary policy file
 # with absolute paths.

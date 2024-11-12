@@ -928,6 +928,7 @@ rule_data:
     - "codeready-builder-for-rhel-9-x86_64-eus-source-rpms__9_DOT_4"
     - "codeready-builder-for-rhel-9-x86_64-rpms"
     - "codeready-builder-for-rhel-9-x86_64-source-rpms"
+    - "codeready-builder-sources"
     - "convert2rhel-for-rhel-6-x86_64-debug-rpms"
     - "convert2rhel-for-rhel-6-x86_64-rpms"
     - "convert2rhel-for-rhel-6-x86_64-source-rpms"

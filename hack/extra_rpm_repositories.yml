@@ -37,3 +37,6 @@ extras:
   -  "appstream"
   -  "appstream-sources"
   -  "codeready-builder"
+  -  "rhel-10-flatpak-app-build"
+  -  "rhel-10-crb"
+  -  "rhel-10-crb-source"

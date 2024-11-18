@@ -11,7 +11,6 @@ pipeline-required-tasks:
         - [git-clone, git-clone-oci-ta]
         - init
         - inspect-image
-        - show-sbom
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
@@ -21,7 +20,6 @@ pipeline-required-tasks:
         - [git-clone, git-clone-oci-ta]
         - init
         - inspect-image
-        - show-sbom
     - effective_on: "2023-08-31T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote]
@@ -31,7 +29,6 @@ pipeline-required-tasks:
         - git-clone
         - init
         - inspect-image
-        - show-sbom
         - summary
   docker:
     - effective_on: "2024-11-01T00:00:00Z"
@@ -45,7 +42,6 @@ pipeline-required-tasks:
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
@@ -57,7 +53,6 @@ pipeline-required-tasks:
         - init
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
@@ -69,7 +64,6 @@ pipeline-required-tasks:
         - init
         - prefetch-dependencies
         - sast-snyk-check
-        - show-sbom
         - source-build
         - summary
   generic:
@@ -84,7 +78,6 @@ pipeline-required-tasks:
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
@@ -96,7 +89,6 @@ pipeline-required-tasks:
         - init
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
@@ -108,7 +100,6 @@ pipeline-required-tasks:
         - init
         - prefetch-dependencies
         - sast-snyk-check
-        - show-sbom
         - source-build
         - summary
   java:
@@ -123,7 +114,6 @@ pipeline-required-tasks:
         - rpms-signature-scan
         - s2i-java
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
@@ -135,7 +125,6 @@ pipeline-required-tasks:
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - s2i-java
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
@@ -147,7 +136,6 @@ pipeline-required-tasks:
         - prefetch-dependencies
         - s2i-java
         - sast-snyk-check
-        - show-sbom
         - source-build
         - summary
   nodejs:
@@ -162,7 +150,6 @@ pipeline-required-tasks:
         - rpms-signature-scan
         - s2i-nodejs
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
@@ -174,7 +161,6 @@ pipeline-required-tasks:
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - s2i-nodejs
         - [sast-snyk-check, sast-snyk-check-oci-ta]
-        - show-sbom
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
       tasks:
@@ -186,7 +172,6 @@ pipeline-required-tasks:
         - prefetch-dependencies
         - s2i-nodejs
         - sast-snyk-check
-        - show-sbom
         - source-build
         - summary
 

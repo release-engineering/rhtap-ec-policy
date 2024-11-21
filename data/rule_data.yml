@@ -3,106 +3,106 @@
 # policy rule which defines the expected behavior when the data is not provided.
 rule_data:
   allowed_registry_prefixes:
-  - registry.access.redhat.com/
-  - registry.redhat.io/
-  - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+    - registry.access.redhat.com/
+    - registry.redhat.io/
+    - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
 
   allowed_step_image_registry_prefixes:
-  - quay.io/redhat-appstudio/
-  - quay.io/konflux-ci/
-  - registry.access.redhat.com/
-  - registry.redhat.io/
-  # Allow prelight images to be used in rhtap / konflux
-  # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
-  - quay.io/opdev/preflight
+    - quay.io/redhat-appstudio/
+    - quay.io/konflux-ci/
+    - registry.access.redhat.com/
+    - registry.redhat.io/
+    # Allow prelight images to be used in rhtap / konflux
+    # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
+    - quay.io/opdev/preflight
 
   allowed_java_component_sources:
-  - redhat
-  - rebuilt
+    - redhat
+    - rebuilt
 
   pipeline_run_params:
-  - git-repo
-  - git-revision
-  - output-image
+    - git-repo
+    - git-revision
+    - output-image
   # See also the additional default rule data values defined in
   # https://github.com/enterprise-contract/ec-policies/blob/main/policy/lib/rule_data.rego
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__deprecated_labels
   deprecated_labels:
-  - name: INSTALL
-    replacement: install
-  - name: Architecture
-    replacement: architecture
-  - name: BZComponent
-    replacement: com.redhat.component
-  - name: Name
-    replacement: name
-  - name: RUN
-    replacement: run
-  - name: Release
-    replacement: release
-  - name: UNINSTALL
-    replacement: uninstall
-  - name: Version
-    replacement: version
+    - name: INSTALL
+      replacement: install
+    - name: Architecture
+      replacement: architecture
+    - name: BZComponent
+      replacement: com.redhat.component
+    - name: Name
+      replacement: name
+    - name: RUN
+      replacement: run
+    - name: Release
+      replacement: release
+    - name: UNINSTALL
+      replacement: uninstall
+    - name: Version
+      replacement: version
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
   required_labels:
-  - name: architecture
-    description: Architecture the software in the image should target.
-  - name: build-date
-    description: Date/Time image was built as RFC 3339 date-time.
-  - name: com.redhat.component
-    description: The Bugzilla component name where bugs against this container should be reported by users.
-  - name: description
-    description: Detailed description of the image.
-  - name: distribution-scope
-    description: >-
-      Scope of intended distribution of the image.
-      (private/authoritative-source-only/restricted/public).
-  - name: io.k8s.description
-    description: Description of the container displayed in Kubernetes.
-  - name: name
-    description: Name of the Image or Container.
-  - name: release
-    description: Release Number for this version.
-  - name: url
-    description: A URL where the user can find more information about the image.
-  - name: vcs-ref
-    description: >-
-      A 'reference' within the version control repository;
-      e.g. a git commit, or a subversion branch.
-  - name: vcs-type
-    description: >-
-      The type of version control used by the container source.
-      Generally one of git, hg, svn, bzr, cvs
-  - name: vendor
-    description: Name of the vendor.
-    values:
-    - 'Red Hat, Inc.'
-  - name: version
-    description: Version of the image.
+    - name: architecture
+      description: Architecture the software in the image should target.
+    - name: build-date
+      description: Date/Time image was built as RFC 3339 date-time.
+    - name: com.redhat.component
+      description: The Bugzilla component name where bugs against this container should be reported by users.
+    - name: description
+      description: Detailed description of the image.
+    - name: distribution-scope
+      description: >-
+        Scope of intended distribution of the image.
+        (private/authoritative-source-only/restricted/public).
+    - name: io.k8s.description
+      description: Description of the container displayed in Kubernetes.
+    - name: name
+      description: Name of the Image or Container.
+    - name: release
+      description: Release Number for this version.
+    - name: url
+      description: A URL where the user can find more information about the image.
+    - name: vcs-ref
+      description: >-
+        A 'reference' within the version control repository;
+        e.g. a git commit, or a subversion branch.
+    - name: vcs-type
+      description: >-
+        The type of version control used by the container source.
+        Generally one of git, hg, svn, bzr, cvs
+    - name: vendor
+      description: Name of the vendor.
+      values:
+        - "Red Hat, Inc."
+    - name: version
+      description: Version of the image.
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__optional_labels
   optional_labels:
-  - name: maintainer
-    description: >-
-      The name and email of the maintainer (usually the submitter).
-      Should contain `@redhat.com` or `Red Hat`.
-  - name: summary
-    description: A short description of the image.
+    - name: maintainer
+      description: >-
+        The name and email of the maintainer (usually the submitter).
+        Should contain `@redhat.com` or `Red Hat`.
+    - name: summary
+      description: A short description of the image.
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__disallowed_inherited_labels
   disallowed_inherited_labels:
-  - name: description
-  - name: io.k8s.description
-  - name: io.k8s.display-name
-  - name: io.openshift.tags
-  - name: summary
-  - name: name
-    effective_on: "2024-04-13T00:00:00Z"
-  - name: com.redhat.component
-    effective_on: "2024-04-13T00:00:00Z"
+    - name: description
+    - name: io.k8s.description
+    - name: io.k8s.display-name
+    - name: io.openshift.tags
+    - name: summary
+    - name: name
+      effective_on: "2024-04-13T00:00:00Z"
+    - name: com.redhat.component
+      effective_on: "2024-04-13T00:00:00Z"
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
   fbc_required_labels: []
@@ -115,61 +115,61 @@ rule_data:
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
-  - sast-snyk-check
-  - sast-snyk-check-oci-ta
-  - ecosystem-cert-preflight-checks
+    - sast-snyk-check
+    - sast-snyk-check-oci-ta
+    - ecosystem-cert-preflight-checks
 
   disallowed_packages:
-  # Disallow hashicorp packages with restrictive licenses.
-  - purl: pkg:golang/github.com/hashicorp/terraform
-    format: semverv
-    # https://github.com/hashicorp/terraform/blob/91488b334e230398765438dce7e90b7db9af0dac/LICENSE#L7
-    min: v1.6.0
-  - purl: pkg:golang/github.com/hashicorp/consul
-    format: semverv
-    # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
-    min: v1.17.0
-    exceptions:
-      # The api submodule has a different license.
-      - subpath: api
-  - purl: pkg:golang/github.com/hashicorp/vault
-    format: semverv
-    # https://github.com/hashicorp/vault/blob/8a46bee76887523a006410d1e865f5365e709851/LICENSE#L7
-    min: v1.15.0
-    exceptions:
-      # The api and sdk submodules have a different license.
-      - subpath: api
-      - subpath: sdk
-  - purl: pkg:golang/github.com/hashicorp/vagrant
-    format: semverv
-    # https://github.com/hashicorp/vagrant/blob/ac6374cd11a51b6992a5dc981bf617db74b4ca7d/LICENSE#L7
-    # Actually 2.4.1.dev but that's not a valid semver. This could be interpreted as the pre-release
-    # version of 2.4.1. In an abundance of caution, restrict starting at the previous patch release.
-    min: v2.4.0
-  - purl: pkg:golang/github.com/hashicorp/nomad
-    format: semverv
-    # https://github.com/hashicorp/nomad/blob/340c9ebd4755c0ab2325aa92c243b344d7956db3/LICENSE#L7
-    min: v1.7.0
-  - purl: pkg:golang/github.com/hashicorp/packer
-    format: semverv
-    # https://github.com/hashicorp/packer/blob/2241b1fba7253732fdb59284c57b376ae8ad0dff/LICENSE#L7
-    min: v1.10.0
-  - purl: pkg:golang/github.com/hashicorp/waypoint
-    format: semverv
-    # https://github.com/hashicorp/waypoint/blob/b81cf848b44f57b95cb2e9766839582cc625d9c2/LICENSE#L7C40-L7C46
-    min: v0.12.0
-  - purl: pkg:golang/github.com/hashicorp/boundary
-    format: semverv
-    # https://github.com/hashicorp/boundary/blob/99529108280ffd55ceefa3f6375a2e57ebeb6a33/LICENSE#L7
-    min: v0.14.0
-  - purl: pkg:golang/github.com/hashicorp/vault-csi-provider
-    format: semverv
-    # https://github.com/hashicorp/vault-csi-provider/blob/d1c8c8c5b29e2e15ecf66fb9d2823b9fe84051b4/LICENSE#L7C56-L7C56
-    min: v1.4.1
-  - purl: pkg:golang/github.com/hashicorp/vault-secrets-operator
-    format: semverv
-    # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
-    min: v0.2.0
+    # Disallow hashicorp packages with restrictive licenses.
+    - purl: pkg:golang/github.com/hashicorp/terraform
+      format: semverv
+      # https://github.com/hashicorp/terraform/blob/91488b334e230398765438dce7e90b7db9af0dac/LICENSE#L7
+      min: v1.6.0
+    - purl: pkg:golang/github.com/hashicorp/consul
+      format: semverv
+      # https://github.com/hashicorp/consul/blob/3a78446114577cb14b2af5039ef4b3e61218404e/LICENSE#L7
+      min: v1.17.0
+      exceptions:
+        # The api submodule has a different license.
+        - subpath: api
+    - purl: pkg:golang/github.com/hashicorp/vault
+      format: semverv
+      # https://github.com/hashicorp/vault/blob/8a46bee76887523a006410d1e865f5365e709851/LICENSE#L7
+      min: v1.15.0
+      exceptions:
+        # The api and sdk submodules have a different license.
+        - subpath: api
+        - subpath: sdk
+    - purl: pkg:golang/github.com/hashicorp/vagrant
+      format: semverv
+      # https://github.com/hashicorp/vagrant/blob/ac6374cd11a51b6992a5dc981bf617db74b4ca7d/LICENSE#L7
+      # Actually 2.4.1.dev but that's not a valid semver. This could be interpreted as the pre-release
+      # version of 2.4.1. In an abundance of caution, restrict starting at the previous patch release.
+      min: v2.4.0
+    - purl: pkg:golang/github.com/hashicorp/nomad
+      format: semverv
+      # https://github.com/hashicorp/nomad/blob/340c9ebd4755c0ab2325aa92c243b344d7956db3/LICENSE#L7
+      min: v1.7.0
+    - purl: pkg:golang/github.com/hashicorp/packer
+      format: semverv
+      # https://github.com/hashicorp/packer/blob/2241b1fba7253732fdb59284c57b376ae8ad0dff/LICENSE#L7
+      min: v1.10.0
+    - purl: pkg:golang/github.com/hashicorp/waypoint
+      format: semverv
+      # https://github.com/hashicorp/waypoint/blob/b81cf848b44f57b95cb2e9766839582cc625d9c2/LICENSE#L7C40-L7C46
+      min: v0.12.0
+    - purl: pkg:golang/github.com/hashicorp/boundary
+      format: semverv
+      # https://github.com/hashicorp/boundary/blob/99529108280ffd55ceefa3f6375a2e57ebeb6a33/LICENSE#L7
+      min: v0.14.0
+    - purl: pkg:golang/github.com/hashicorp/vault-csi-provider
+      format: semverv
+      # https://github.com/hashicorp/vault-csi-provider/blob/d1c8c8c5b29e2e15ecf66fb9d2823b9fe84051b4/LICENSE#L7C56-L7C56
+      min: v1.4.1
+    - purl: pkg:golang/github.com/hashicorp/vault-secrets-operator
+      format: semverv
+      # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
+      min: v0.2.0
 
   # No binary python deps
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#sbom_cyclonedx__disallowed_package_attributes
@@ -180,54 +180,60 @@ rule_data:
   # No releases on Fridays and weekends
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__weekday_restriction
   disallowed_weekdays:
-  - friday
-  - saturday
-  - sunday
+    - friday
+    - saturday
+    - sunday
 
   # No releases during year-end shutdown
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__date_restriction
   disallowed_dates:
-  # EOY 2024
-  - 2024-12-24
-  - 2024-12-25
-  - 2024-12-26
-  - 2024-12-27
-  - 2024-12-28
-  - 2024-12-29
-  - 2024-12-30
-  - 2024-12-31
-  - 2025-01-01
-  # EOY 2025
-  - 2025-12-24
-  - 2025-12-25
-  - 2025-12-26
-  - 2025-12-27
-  - 2025-12-28
-  - 2025-12-29
-  - 2025-12-30
-  - 2025-12-31
-  - 2026-01-01
+    # Thanksgiving 2024
+    - 2024-11-27
+    - 2024-11-28
+    - 2024-11-29
+    - 2024-11-30
+    - 2024-12-01
+    # EOY 2024
+    - 2024-12-24
+    - 2024-12-25
+    - 2024-12-26
+    - 2024-12-27
+    - 2024-12-28
+    - 2024-12-29
+    - 2024-12-30
+    - 2024-12-31
+    - 2025-01-01
+    # EOY 2025
+    - 2025-12-24
+    - 2025-12-25
+    - 2025-12-26
+    - 2025-12-27
+    - 2025-12-28
+    - 2025-12-29
+    - 2025-12-30
+    - 2025-12-31
+    - 2026-01-01
 
-# Usage: https://enterprisecontract.dev/docs/ec-policies/release_policy.html#olm__required_olm_features_annotations_provided
+  # Usage: https://enterprisecontract.dev/docs/ec-policies/release_policy.html#olm__required_olm_features_annotations_provided
   required_olm_features_annotations:
-  - features.operators.openshift.io/disconnected
-  - features.operators.openshift.io/fips-compliant
-  - features.operators.openshift.io/proxy-aware
-  - features.operators.openshift.io/cnf
-  - features.operators.openshift.io/cni
-  - features.operators.openshift.io/csi
-  - features.operators.openshift.io/tls-profiles
-  - features.operators.openshift.io/token-auth-aws
-  - features.operators.openshift.io/token-auth-azure
-  - features.operators.openshift.io/token-auth-gcp
+    - features.operators.openshift.io/disconnected
+    - features.operators.openshift.io/fips-compliant
+    - features.operators.openshift.io/proxy-aware
+    - features.operators.openshift.io/cnf
+    - features.operators.openshift.io/cni
+    - features.operators.openshift.io/csi
+    - features.operators.openshift.io/tls-profiles
+    - features.operators.openshift.io/token-auth-aws
+    - features.operators.openshift.io/token-auth-azure
+    - features.operators.openshift.io/token-auth-gcp
 
   disallowed_platform_patterns:
-  - .*root.*
+    - .*root.*
 
   # List of keys: https://access.redhat.com/security/team/key
   allowed_rpm_signature_keys:
-  # release key 2
-  - 199e2f91fd431d51
+    # release key 2
+    - 199e2f91fd431d51
 
   # Thresholds are one day shorter than the time periods for grade C in:
   # https://access.redhat.com/articles/2803031

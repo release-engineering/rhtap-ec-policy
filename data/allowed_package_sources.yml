@@ -1,0 +1,6 @@
+---
+rule_data:
+  allowed_package_sources:
+    - type: generic
+      patterns:
+        - https://indy\.corp\.redhat\.com.*

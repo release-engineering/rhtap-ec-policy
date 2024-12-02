@@ -15,6 +15,7 @@ rule_data:
   # Allow prelight images to be used in rhtap / konflux
   # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
   - quay.io/opdev/preflight
+  - quay.io/redhat-services-prod/sast/coverity
 
   allowed_java_component_sources:
   - redhat

@@ -6,11 +6,9 @@ pipeline-required-tasks:
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - deprecated-image-check
-        - fbc-related-image-check
-        - fbc-validation
+        - [fbc-related-image-check, validate-fbc]
         - [git-clone, git-clone-oci-ta]
         - init
-        - inspect-image
     - effective_on: "2024-06-17T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]

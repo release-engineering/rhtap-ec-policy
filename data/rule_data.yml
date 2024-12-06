@@ -17,6 +17,10 @@ rule_data:
   - quay.io/opdev/preflight
   - quay.io/redhat-services-prod/sast/coverity
 
+  # Number of days before a version of the Task expires that warnings are reported
+  # See https://enterprisecontract.dev/docs/ec-policies/release_policy.html#trusted_task__current
+  task_expiry_warning_days: 14
+
   allowed_java_component_sources:
   - redhat
   - rebuilt

@@ -118,6 +118,8 @@ rule_data:
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
   - ecosystem-cert-preflight-checks
+  - fips-operator-bundle-check
+  - fips-operator-bundle-check-oci-ta
   - sast-coverity-check
   - sast-coverity-check-oci-ta
   - sast-shell-check

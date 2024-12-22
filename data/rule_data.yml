@@ -120,6 +120,8 @@ rule_data:
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
+  - fips-operator-bundle-check
+  - fips-operator-bundle-check-oci-ta
   - sast-snyk-check
   - sast-snyk-check-oci-ta
   - ecosystem-cert-preflight-checks

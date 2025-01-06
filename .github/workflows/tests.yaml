@@ -23,7 +23,9 @@ jobs:
       - name: Install ec-cli
         run: |-
           mkdir -p "${HOME}/.local/bin"
-          curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          # curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          # Workaround until the EC release is fixed.
+          curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/v0.6.150/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
           chmod +x "${HOME}/.local/bin/ec"
           ec version
 

@@ -53,10 +53,6 @@ rule_data:
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
   required_labels:
-  - name: architecture
-    description: Architecture the software in the image should target.
-  - name: build-date
-    description: Date/Time image was built as RFC 3339 date-time.
   - name: com.redhat.component
     description: The Bugzilla component name where bugs against this container should be reported by users.
   - name: description

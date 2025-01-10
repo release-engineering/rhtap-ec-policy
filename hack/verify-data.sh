@@ -10,7 +10,7 @@ cd "$(git rev-parse --show-toplevel)"
 outdated="$(comm -13 \
     <(yq .rule_data.known_rpm_repositories "data/known_rpm_repositories.yml" | sort -u) \
     <(yq .extras "hack/extra_rpm_repositories.yml" | sort -u))"
-if [[ -n "${outdated}" ]]; then
+if [[ -n "${outdated}" && "${outdated}" != "[]" ]]; then
     echo "Out of date items found:"
     echo "${outdated}"
     echo "❌ Run hack/update-known-rpm-repositories.sh"

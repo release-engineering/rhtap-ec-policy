@@ -7,9 +7,7 @@ set -o nounset
 cd "$(git rev-parse --show-toplevel)"
 
 # Verify known_rpm_repositories.yml has been updated with entries from extra_rpm_repositories.yml.
-outdated="$(comm -13 \
-    <(yq .rule_data.known_rpm_repositories "data/known_rpm_repositories.yml" | sort -u) \
-    <(yq .extras "hack/extra_rpm_repositories.yml" | sort -u))"
+outdated="$(./hack/render-known-rpm-repositories.sh | diff data/known_rpm_repositories.yml - || true)"
 if [[ -n "${outdated}" && "${outdated}" != "[]" ]]; then
     echo "Out of date items found:"
     echo "${outdated}"

@@ -1,0 +1,41 @@
+# Update this list for any repos that we be removed from the list of known repositories.
+#
+# As of KONFLUX-6218, put repositories here that we don't want people to use even though they do appear in the cpe mapping file.
+
+suppressed:
+- ubi-8-baseos-rpms
+- ubi-8-baseos-debug-rpms
+- ubi-8-baseos-source-rpms
+- ubi-8-appstream-rpms
+- ubi-8-appstream-debug-rpms
+- ubi-8-appstream-source-rpms
+- ubi-9-baseos-rpms
+- ubi-9-baseos-debug-rpms
+- ubi-9-baseos-source-rpms
+- ubi-9-appstream-rpms
+- ubi-9-appstream-debug-rpms
+- ubi-9-appstream-source-rpms
+- ubi-10-baseos-rpms
+- ubi-10-baseos-debug-rpms
+- ubi-10-baseos-source-rpms
+- ubi-10-appstream-rpms
+- ubi-10-appstream-debug-rpms
+- ubi-10-appstream-source-rpms
+- rhel-8-baseos-rpms
+- rhel-8-baseos-debug-rpms
+- rhel-8-baseos-source-rpms
+- rhel-8-appstream-rpms
+- rhel-8-appstream-debug-rpms
+- rhel-8-appstream-source-rpms
+- rhel-9-baseos-rpms
+- rhel-9-baseos-debug-rpms
+- rhel-9-baseos-source-rpms
+- rhel-9-appstream-rpms
+- rhel-9-appstream-debug-rpms
+- rhel-9-appstream-source-rpms
+- rhel-10-baseos-rpms
+- rhel-10-baseos-debug-rpms
+- rhel-10-baseos-source-rpms
+- rhel-10-appstream-rpms
+- rhel-10-appstream-debug-rpms
+- rhel-10-appstream-source-rpms

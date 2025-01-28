@@ -29,6 +29,21 @@ pipeline-required-tasks:
         - inspect-image
         - summary
   docker:
+    - effective_on: "2025-03-01T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - rpms-signature-scan
+        - [sast-coverity-check, sast-coverity-check-oci-ta]
+        - [sast-shell-check, sast-shell-check-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - [sast-unicode-check, sast-unicode-check-oci-ta]
+        - [source-build, source-build-oci-ta]
     - effective_on: "2024-11-01T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
@@ -65,6 +80,21 @@ pipeline-required-tasks:
         - source-build
         - summary
   generic:
+    - effective_on: "2025-03-01T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - rpms-signature-scan
+        - [sast-coverity-check, sast-coverity-check-oci-ta]
+        - [sast-shell-check, sast-shell-check-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - [sast-unicode-check, sast-unicode-check-oci-ta]
+        - [source-build, source-build-oci-ta]
     - effective_on: "2024-11-01T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
@@ -101,6 +131,21 @@ pipeline-required-tasks:
         - source-build
         - summary
   java:
+    - effective_on: "2025-03-01T00:00:00Z"
+      tasks:
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - rpms-signature-scan
+        - s2i-java
+        - [sast-coverity-check, sast-coverity-check-oci-ta]
+        - [sast-shell-check, sast-shell-check-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - [sast-unicode-check, sast-unicode-check-oci-ta]
+        - [source-build, source-build-oci-ta]
     - effective_on: "2024-11-01T00:00:00Z"
       tasks:
         - clair-scan
@@ -137,6 +182,21 @@ pipeline-required-tasks:
         - source-build
         - summary
   nodejs:
+    - effective_on: "2025-03-01T00:00:00Z"
+      tasks:
+        - clair-scan
+        - clamav-scan
+        - deprecated-image-check
+        - [git-clone, git-clone-oci-ta]
+        - init
+        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+        - rpms-signature-scan
+        - s2i-nodejs
+        - [sast-coverity-check, sast-coverity-check-oci-ta]
+        - [sast-shell-check, sast-shell-check-oci-ta]
+        - [sast-snyk-check, sast-snyk-check-oci-ta]
+        - [sast-unicode-check, sast-unicode-check-oci-ta]
+        - [source-build, source-build-oci-ta]
     - effective_on: "2024-11-01T00:00:00Z"
       tasks:
         - clair-scan
@@ -175,6 +235,19 @@ pipeline-required-tasks:
 
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 required-tasks:
+  - effective_on: "2025-03-01T00:00:00Z"
+    tasks:
+      - clair-scan
+      - clamav-scan
+      - [git-clone, git-clone-oci-ta]
+      - init
+      - [prefetch-dependencies, prefetch-dependencies-oci-ta]
+      - rpms-signature-scan
+      - [sast-coverity-check, sast-coverity-check-oci-ta]
+      - [sast-shell-check, sast-shell-check-oci-ta]
+      - [sast-snyk-check, sast-snyk-check-oci-ta]
+      - [sast-unicode-check, sast-unicode-check-oci-ta]
+      - [source-build, source-build-oci-ta]
   - effective_on: "2024-11-01T00:00:00Z"
     tasks:
       - clair-scan

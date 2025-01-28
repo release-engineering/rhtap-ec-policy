@@ -971,6 +971,7 @@ rule_data:
     - "costmanagement-1-for-rhel-8-x86_64-rpms"
     - "cryostat-textonly-2-for-middleware-rpms"
     - "cryostat-textonly-3-for-middleware-rpms"
+    - "cryostat-textonly-4-for-middleware-rpms"
     - "custom-metrics-autoscaler-2-for-rhel-8-x86_64-debug-rpms"
     - "custom-metrics-autoscaler-2-for-rhel-8-x86_64-rpms"
     - "custom-metrics-autoscaler-2-for-rhel-8-x86_64-source-rpms"

@@ -235,3 +235,6 @@ rule_data:
   cve_leeway:
     critical: 6
     high: 29
+
+  allowed_rpm_build_pipelines:
+    - build-rpm-package

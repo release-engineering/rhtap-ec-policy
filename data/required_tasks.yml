@@ -2,6 +2,14 @@
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 pipeline-required-tasks:
   fbc:
+    - effective_on: "2025-03-17T00:00:00Z"
+      tasks:
+        - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
+        - deprecated-image-check
+        - [fbc-fips-check, fbc-fips-check-oci-ta]
+        - [fbc-related-image-check, validate-fbc, fbc-target-index-pruning-check]
+        - [git-clone, git-clone-oci-ta]
+        - init
     - effective_on: "2025-03-01T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]

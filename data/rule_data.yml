@@ -6,6 +6,7 @@ rule_data:
   - registry.access.redhat.com/
   - registry.redhat.io/
   - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+  - quay.io/konflux-ci/yq
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
 
   allowed_step_image_registry_prefixes:
@@ -117,9 +118,15 @@ rule_data:
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
+  - ecosystem-cert-preflight-checks
+  - sast-coverity-check
+  - sast-coverity-check-oci-ta
+  - sast-shell-check
+  - sast-shell-check-oci-ta
   - sast-snyk-check
   - sast-snyk-check-oci-ta
-  - ecosystem-cert-preflight-checks
+  - sast-unicode-check
+  - sast-unicode-check-oci-ta
 
   disallowed_packages:
   # Disallow hashicorp packages with restrictive licenses.

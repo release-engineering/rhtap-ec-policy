@@ -23,10 +23,6 @@ rule_data:
   # See https://enterprisecontract.dev/docs/ec-policies/release_policy.html#trusted_task__current
   task_expiry_warning_days: 14
 
-  allowed_java_component_sources:
-  - redhat
-  - rebuilt
-
   pipeline_run_params:
   - git-repo
   - git-revision

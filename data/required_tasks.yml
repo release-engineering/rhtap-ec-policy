@@ -37,7 +37,7 @@ pipeline-required-tasks:
         - inspect-image
         - summary
   docker:
-    - effective_on: "2025-03-01T00:00:00Z"
+    - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - clair-scan
@@ -88,7 +88,7 @@ pipeline-required-tasks:
         - source-build
         - summary
   generic:
-    - effective_on: "2025-03-01T00:00:00Z"
+    - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - clair-scan
@@ -139,7 +139,7 @@ pipeline-required-tasks:
         - source-build
         - summary
   nodejs:
-    - effective_on: "2025-03-01T00:00:00Z"
+    - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - clair-scan
         - clamav-scan
@@ -192,7 +192,7 @@ pipeline-required-tasks:
 
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 required-tasks:
-  - effective_on: "2025-03-01T00:00:00Z"
+  - effective_on: "2025-04-01T00:00:00Z"
     tasks:
       - clair-scan
       - clamav-scan

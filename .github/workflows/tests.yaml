@@ -43,5 +43,11 @@ jobs:
           chmod +x "${HOME}/.local/bin/ec"
           ec version
 
+      - name: Install cosign
+        run: |-
+          curl -sL https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-linux-amd64 -o "${HOME}/.local/bin/cosign"
+          chmod +x "${HOME}/.local/bin/cosign"
+          cosign version
+
       - name: Validate data
         run: ./hack/smoke-test.sh

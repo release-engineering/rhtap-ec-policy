@@ -49,5 +49,8 @@ jobs:
           chmod +x "${HOME}/.local/bin/cosign"
           cosign version
 
+      - name: Patch policy to refer to key by absolute path
+        run: sed -i  's|hack/policy/cosign.pub|/home/runner/work/rhtap-ec-policy/rhtap-ec-policy/hack/policy/cosign.pub|' hack/policy/smoketest.yaml
+
       - name: Validate data
         run: ./hack/smoke-test.sh

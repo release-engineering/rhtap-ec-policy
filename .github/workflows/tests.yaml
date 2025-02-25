@@ -29,3 +29,28 @@ jobs:
 
       - name: Validate data
         run: ./hack/verify-data.sh
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ec-cli
+        run: |-
+          mkdir -p "${HOME}/.local/bin"
+          curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          chmod +x "${HOME}/.local/bin/ec"
+          ec version
+
+      - name: Install cosign
+        run: |-
+          curl -sL https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-linux-amd64 -o "${HOME}/.local/bin/cosign"
+          chmod +x "${HOME}/.local/bin/cosign"
+          cosign version
+
+      - name: Patch policy to refer to key by absolute path
+        run: sed -i  's|hack/policy/cosign.pub|/home/runner/work/rhtap-ec-policy/rhtap-ec-policy/hack/policy/cosign.pub|' hack/policy/smoketest.yaml
+
+      - name: Validate data
+        run: ./hack/smoke-test.sh

@@ -1,0 +1,19 @@
+---
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: EnterpriseContractPolicy
+metadata:
+  name: smoketest
+spec:
+  description: 'An example policy to test that the rule data here is valid'
+  publicKey: 'hack/policy/cosign.pub'
+  sources:
+    - name: Policies
+      data:
+        - ./data
+        - oci::quay.io/konflux-ci/tekton-catalog/data-acceptable-bundles:latest
+      policy:
+        - oci::quay.io/enterprise-contract/ec-release-policy:konflux
+      config:
+        include:
+          - '@redhat'
+        exclude: []

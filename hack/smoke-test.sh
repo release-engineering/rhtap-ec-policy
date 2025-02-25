@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-POLICY=hack/policy/smoketest.yaml
+POLICY=./hack/policy/smoketest.yaml
 #IMAGE=quay.io/konflux-ci/oras:latest
 IMAGE=quay.io/konflux-ci/ec-golden-image:latest
 

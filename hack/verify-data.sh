@@ -32,6 +32,9 @@ for tag in konflux latest; do
   POLICY_YAML="$(mktemp --suffix '.yaml')"
   < policy.yaml env POLICY_TAG=$tag envsubst '$PWD,$POLICY_TAG' > "${POLICY_YAML}"
 
+  echo "🔍 Policy config to valiate:"
+  < "${POLICY_YAML}" yq .
+
   ec validate policy --policy "${POLICY_YAML}"
   echo "✅ Policy config validated ($tag tag)"
 

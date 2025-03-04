@@ -194,6 +194,16 @@ pipeline-required-tasks:
         - sast-snyk-check
         - source-build
         - summary
+  rpm:
+    - effective_on: "2025-04-15T00:00:00Z"
+      tasks:
+        - init
+        - git-clone-oci-ta
+        - get-rpm-sources
+        - calculate-deps
+        - rpmbuild
+        - import-to-quay
+        - check-noarch
 
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 required-tasks:

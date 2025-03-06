@@ -21,7 +21,7 @@ BUILDTIME_IMAGE=$(cosign download attestation $IMAGE | jq -r "${quayexpression}"
 IMAGEJSON=$(echo "{}" | jq '.components += [ {"containerImage": "'"$BUILDTIME_IMAGE"'", "source": {"git": {"revision": "'"${GITREF}"'", "url": "'"${GITREPO}"'"}}} ]')
 
 # And verify it.
-if ec validate --quiet image --images "${IMAGEJSON}" --ignore-rekor --policy "${POLICY}"; then
+if ec --debug validate --quiet image --images "${IMAGEJSON}" --ignore-rekor --policy "${POLICY}"; then
 	echo "✅ All good. ${IMAGE} validated successfully"
 	exit 0
 else

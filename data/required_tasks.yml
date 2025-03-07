@@ -189,6 +189,23 @@ pipeline-required-tasks:
         - sast-snyk-check
         - source-build
         - summary
+  rpm:
+    - effective_on: "2025-04-01T00:00:00Z"
+      tasks:
+        - store-start-time
+        - init
+        - clone-repository
+        - get-rpm-sources
+        - calculate-deps-x86-64
+        - rpmbuild-x86-64
+        - calculate-deps-aarch64
+        - rpmbuild-aarch64
+        - calculate-deps-s390x
+        - rpmbuild-s390x
+        - calculate-deps-ppc64le
+        - rpmbuild-ppc64le
+        - upload-to-quay
+        - check-noarch-rpms
 
 # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#tasks_package
 required-tasks:

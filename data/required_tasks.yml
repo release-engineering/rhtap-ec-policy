@@ -55,7 +55,6 @@ pipeline-required-tasks:
         - init
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
-        - [sast-coverity-check, sast-coverity-check-oci-ta]
         - [sast-shell-check, sast-shell-check-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [sast-unicode-check, sast-unicode-check-oci-ta]
@@ -106,7 +105,6 @@ pipeline-required-tasks:
         - init
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
-        - [sast-coverity-check, sast-coverity-check-oci-ta]
         - [sast-shell-check, sast-shell-check-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [sast-unicode-check, sast-unicode-check-oci-ta]
@@ -157,7 +155,6 @@ pipeline-required-tasks:
         - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - s2i-nodejs
-        - [sast-coverity-check, sast-coverity-check-oci-ta]
         - [sast-shell-check, sast-shell-check-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [sast-unicode-check, sast-unicode-check-oci-ta]
@@ -208,7 +205,6 @@ required-tasks:
       - init
       - [prefetch-dependencies, prefetch-dependencies-oci-ta]
       - rpms-signature-scan
-      - [sast-coverity-check, sast-coverity-check-oci-ta]
       - [sast-shell-check, sast-shell-check-oci-ta]
       - [sast-snyk-check, sast-snyk-check-oci-ta]
       - [sast-unicode-check, sast-unicode-check-oci-ta]

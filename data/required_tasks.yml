@@ -53,7 +53,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-shell-check, sast-shell-check-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
@@ -67,7 +66,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [source-build, source-build-oci-ta]
@@ -79,7 +77,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
@@ -90,7 +87,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - git-clone
         - init
-        - prefetch-dependencies
         - sast-snyk-check
         - source-build
         - summary
@@ -103,7 +99,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-shell-check, sast-shell-check-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
@@ -117,7 +112,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [source-build, source-build-oci-ta]
@@ -129,7 +123,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [source-build, source-build-oci-ta]
     - effective_on: "2023-12-31T00:00:00Z"
@@ -140,7 +133,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - git-clone
         - init
-        - prefetch-dependencies
         - sast-snyk-check
         - source-build
         - summary
@@ -152,7 +144,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - s2i-nodejs
         - [sast-shell-check, sast-shell-check-oci-ta]
@@ -166,7 +157,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - rpms-signature-scan
         - s2i-nodejs
         - [sast-snyk-check, sast-snyk-check-oci-ta]
@@ -178,7 +168,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
         - init
-        - [prefetch-dependencies, prefetch-dependencies-oci-ta]
         - s2i-nodejs
         - [sast-snyk-check, sast-snyk-check-oci-ta]
         - [source-build, source-build-oci-ta]
@@ -189,7 +178,6 @@ pipeline-required-tasks:
         - deprecated-image-check
         - git-clone
         - init
-        - prefetch-dependencies
         - s2i-nodejs
         - sast-snyk-check
         - source-build
@@ -213,7 +201,6 @@ required-tasks:
       - clamav-scan
       - [git-clone, git-clone-oci-ta]
       - init
-      - [prefetch-dependencies, prefetch-dependencies-oci-ta]
       - rpms-signature-scan
       - [sast-shell-check, sast-shell-check-oci-ta]
       - [sast-snyk-check, sast-snyk-check-oci-ta]
@@ -225,7 +212,6 @@ required-tasks:
       - clamav-scan
       - [git-clone, git-clone-oci-ta]
       - init
-      - [prefetch-dependencies, prefetch-dependencies-oci-ta]
       - rpms-signature-scan
       - [sast-snyk-check, sast-snyk-check-oci-ta]
       - [source-build, source-build-oci-ta]
@@ -235,7 +221,6 @@ required-tasks:
       - clamav-scan
       - [git-clone, git-clone-oci-ta]
       - init
-      - [prefetch-dependencies, prefetch-dependencies-oci-ta]
       - [sast-snyk-check, sast-snyk-check-oci-ta]
       - [source-build, source-build-oci-ta]
   - effective_on: "2023-12-31T00:00:00Z"
@@ -244,7 +229,6 @@ required-tasks:
       - clamav-scan
       - git-clone
       - init
-      - prefetch-dependencies
       - sast-snyk-check
       - source-build
       - summary

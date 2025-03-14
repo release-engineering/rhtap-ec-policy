@@ -117,6 +117,7 @@ rule_data:
 
   # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
   informative_tests:
+  - coverity-availability-check
   - ecosystem-cert-preflight-checks
   - fips-operator-bundle-check
   - fips-operator-bundle-check-oci-ta

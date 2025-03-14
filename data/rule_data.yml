@@ -120,6 +120,8 @@ rule_data:
   - ecosystem-cert-preflight-checks
   - fips-operator-bundle-check
   - fips-operator-bundle-check-oci-ta
+  - coverity-availability-check
+  - coverity-availability-check-oci-ta
   - sast-coverity-check
   - sast-coverity-check-oci-ta
   - sast-shell-check

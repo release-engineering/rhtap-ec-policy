@@ -10568,4 +10568,6 @@ rule_data:
     - "ubi-9-for-x86_64-baseos-debug-rpms"
     - "ubi-9-for-x86_64-baseos-rpms"
     - "ubi-9-for-x86_64-baseos-source-rpms"
+    - "ubi-9-appstream-rpms"
+    - "ubi-9-baseos-rpms"
     - "web-terminal-textonly-1-for-middleware-rpms"

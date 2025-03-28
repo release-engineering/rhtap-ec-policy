@@ -7,6 +7,8 @@ rule_data:
   - registry.redhat.io/
   - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
   - quay.io/konflux-ci/yq
+  - quay.io/konflux-ci/bazel5-ubi8
+  - quay.io/konflux-ci/bazel6-ubi9
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
 
   allowed_step_image_registry_prefixes:

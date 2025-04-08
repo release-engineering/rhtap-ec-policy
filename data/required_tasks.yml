@@ -205,14 +205,14 @@ pipeline-required-tasks:
         - import-to-quay
         - check-noarch
   oci-copy:
-    - effective_on: "2025-04-01T00:00Z"
+    - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - init
         - git-clone-oci-ta
         - oci-copy-oci-ta
         - sast-snyk-check-oci-ta
   modelcar:
-    - effective_on: "2025-04-01T00:00Z"
+    - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - init
         - git-clone-oci-ta

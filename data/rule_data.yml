@@ -2,6 +2,13 @@
 # IMPORTANT: Policy rule packages that utilize data from this document should have an explicit
 # policy rule which defines the expected behavior when the data is not provided.
 rule_data:
+  allowed_branch_patterns:
+  - ^refs/heads/rhel-[0-9]+-main$
+  - ^refs/heads/rhel-7\.[0-9]+$
+  - ^refs/heads/rhel-[89]\.[0-9]+\.0$
+  - ^refs/heads/rhel-10\.[0-9]+$
+  - ^refs/heads/stream-.*-rhel-[89]\.[0-9]+\.0$
+
   allowed_registry_prefixes:
   - registry.access.redhat.com/
   - registry.redhat.io/

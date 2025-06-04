@@ -13,6 +13,19 @@ rule_data:
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
 
+  allowed_olm_image_registry_prefixes:
+  - registry.access.redhat.com/
+  - registry.redhat.io/
+  # From here down these are for backwards compatibility since previously
+  # allowed_registry_prefixes was used. They will be removed on July 14th 2025.
+  - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+  - quay.io/konflux-ci/yq
+  - quay.io/konflux-ci/bazel5-ubi8
+  - quay.io/konflux-ci/bazel6-ubi9
+  - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
+  - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
+  - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
+
   allowed_step_image_registry_prefixes:
   - quay.io/redhat-appstudio/
   - quay.io/konflux-ci/

@@ -37,7 +37,7 @@ rule_data:
   - quay.io/redhat-services-prod/sast/coverity
 
   # Number of days before a version of the Task expires that warnings are reported
-  # See https://enterprisecontract.dev/docs/ec-policies/release_policy.html#trusted_task__current
+  # See https://conforma.dev/docs/policy/packages/release_trusted_task.html#trusted_task__current
   task_expiry_warning_days: 14
 
   allowed_java_component_sources:
@@ -50,7 +50,7 @@ rule_data:
   # See also the additional default rule data values defined in
   # https://github.com/enterprise-contract/ec-policies/blob/main/policy/lib/rule_data.rego
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__deprecated_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__deprecated_labels
   deprecated_labels:
   - name: INSTALL
     replacement: install
@@ -69,7 +69,7 @@ rule_data:
   - name: Version
     replacement: version
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__required_labels
   required_labels:
   - name: com.redhat.component
     description: The Bugzilla component name where bugs against this container should be reported by users.
@@ -102,7 +102,7 @@ rule_data:
   - name: version
     description: Version of the image.
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__optional_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__optional_labels
   optional_labels:
   - name: maintainer
     description: >-
@@ -111,7 +111,7 @@ rule_data:
   - name: summary
     description: A short description of the image.
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__disallowed_inherited_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__disallowed_inherited_labels
   disallowed_inherited_labels:
   - name: description
   - name: io.k8s.description
@@ -123,16 +123,16 @@ rule_data:
   - name: com.redhat.component
     effective_on: "2024-04-13T00:00:00Z"
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__required_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__required_labels
   fbc_required_labels: []
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__optional_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__optional_labels
   fbc_optional_labels: []
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__disallowed_inherited_labels
+  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__disallowed_inherited_labels
   fbc_disallowed_inherited_labels: []
 
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#test_package
+  # https://conforma.dev/docs/policy/packages/release_test.html
   informative_tests:
   - ecosystem-cert-preflight-checks
   - fips-operator-bundle-check
@@ -201,20 +201,20 @@ rule_data:
     min: v0.2.0
 
   # No binary python deps
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#sbom_cyclonedx__disallowed_package_attributes
+  # https://conforma.dev/docs/policy/packages/release_sbom_cyclonedx.html#sbom_cyclonedx__disallowed_package_attributes
   disallowed_attributes:
     - name: cachi2:pip:package:binary
       value: "true"
 
   # No releases on Fridays and weekends
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__weekday_restriction
+  # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__weekday_restriction
   disallowed_weekdays:
   - friday
   - saturday
   - sunday
 
   # No releases during year-end shutdown
-  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#schedule__date_restriction
+  # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__date_restriction
   disallowed_dates:
   # EOY 2024
   - 2024-12-24
@@ -237,7 +237,7 @@ rule_data:
   - 2025-12-31
   - 2026-01-01
 
-# Usage: https://enterprisecontract.dev/docs/ec-policies/release_policy.html#olm__required_olm_features_annotations_provided
+# Usage: https://conforma.dev/docs/policy/packages/release_olm.html#olm__required_olm_features_annotations_provided
   required_olm_features_annotations:
   - features.operators.openshift.io/disconnected
   - features.operators.openshift.io/fips-compliant

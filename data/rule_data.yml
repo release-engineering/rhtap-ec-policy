@@ -101,8 +101,15 @@ rule_data:
     - 'Red Hat, Inc.'
   - name: version
     description: Version of the image.
-
-  # https://conforma.dev/docs/policy/packages/release_labels.html#labels__optional_labels
+  - name: org.opencontainers.image.created
+    description: >-
+      The creation timestamp of the image. This label must always be set by the Konflux build task for on-prem product releases. The policy must also support reproducible builds by allowing users to override the timestamp using the SOURCE_DATE_EPOCH environment variable.
+    effective_on: "2026-06-07T00:00:00Z"
+  - name: cpe
+    description: >-
+      The CPE (Common Platform Enumeration) identifier for the product, e.g., cpe:/a:redhat:openshift_gitops:1.16::el8. This label is required for on-prem product releases.
+    effective_on: "2026-06-07T00:00:00Z"
+  # https://enterprisecontract.dev/docs/ec-policies/release_policy.html#labels__optional_labels
   optional_labels:
   - name: maintainer
     description: >-

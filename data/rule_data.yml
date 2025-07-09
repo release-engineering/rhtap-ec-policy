@@ -9,6 +9,7 @@ rule_data:
   - quay.io/konflux-ci/yq
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9
+  - quay.io/konflux-ci/bazel7-ubi9
   - quay.io/konflux-ci/operator-sdk-builder
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
@@ -23,6 +24,7 @@ rule_data:
   - quay.io/konflux-ci/yq
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9
+  - quay.io/konflux-ci/bazel7-ubi9
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent

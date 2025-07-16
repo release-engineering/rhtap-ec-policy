@@ -13,6 +13,7 @@ rule_data:
   - quay.io/konflux-ci/operator-sdk-builder
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
+  - quay.io/konflux-ci/git-clone
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
 
   allowed_olm_image_registry_prefixes:

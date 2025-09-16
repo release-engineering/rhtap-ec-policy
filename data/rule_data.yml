@@ -5,7 +5,6 @@ rule_data:
   allowed_registry_prefixes:
   - registry.access.redhat.com/
   - registry.redhat.io/
-  - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
   - quay.io/konflux-ci/yq
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9
@@ -14,6 +13,8 @@ rule_data:
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
   - quay.io/konflux-ci/git-clone
+  - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
+  - brew.registry.redhat.io/rh-osbs/openshift-ose-operator-registry-rhel9
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent
 
   allowed_olm_image_registry_prefixes:

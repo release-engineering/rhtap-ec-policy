@@ -5,4 +5,10 @@
 # An image that contains an rpm that is associated with a valid repository id in the public mapping will not be
 # properly understood by clair and third-party scanners.
 
-extras: []
+extras:
+  - "rhceph-9-tools-for-rhel-9-$basearch-rpms"
+  - "rhceph-9-tools-for-rhel-9-$basearch-debug-rpms"
+  - "rhceph-9-tools-for-rhel-9-$basearch-source-rpms"
+  - "rhceph-9-tools-for-rhel-10-$basearch-rpms"
+  - "rhceph-9-tools-for-rhel-10-$basearch-debug-rpms"
+  - "rhceph-9-tools-for-rhel-10-$basearch-source-rpms"

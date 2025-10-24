@@ -215,10 +215,16 @@ rule_data:
     # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
     min: v0.2.0
 
-  # No binary python deps
+  # No binary python/ruby deps
   # https://conforma.dev/docs/policy/packages/release_sbom_cyclonedx.html#sbom_cyclonedx__disallowed_package_attributes
   disallowed_attributes:
+    - name: cachi2:bundler:package:binary
+      value: "true"
     - name: cachi2:pip:package:binary
+      value: "true"
+    - name: hermeto:bundler:package:binary
+      value: "true"
+    - name: hermeto:pip:package:binary
       value: "true"
 
   # No releases on Fridays and weekends

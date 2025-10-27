@@ -5,6 +5,8 @@ rule_data:
   allowed_registry_prefixes:
   - registry.access.redhat.com/
   - registry.redhat.io/
+  - registry.ci.openshift.org/
+  - quay.io/redhat-user-workloads/
   - quay.io/konflux-ci/yq
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9

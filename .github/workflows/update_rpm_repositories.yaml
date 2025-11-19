@@ -33,7 +33,8 @@ jobs:
           branch: ci/update-rpm-repositories
           commit-message: Update list of known RPM repositories
           reviewers: |
-            lcarva
+            rhartman93
+            ralphbean
           sign-commits: true
           signoff: true
           title: Update list of known RPM repositories

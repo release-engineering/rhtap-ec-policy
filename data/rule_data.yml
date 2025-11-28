@@ -30,6 +30,7 @@ rule_data:
   # Documentation link: https://github.com/redhat-openshift-ecosystem/openshift-preflight/blob/main/docs/RECIPES.md
   - quay.io/opdev/preflight
   - quay.io/redhat-services-prod/sast/coverity
+  - quay.io/redhat-services-prod/mos-lpsre-tenant/package-operator-internal
 
   # Number of days before a version of the Task expires that warnings are reported
   # See https://conforma.dev/docs/policy/packages/release_trusted_task.html#trusted_task__current
@@ -37,7 +38,7 @@ rule_data:
 
   allowed_java_component_sources:
   - none
-  
+
   pipeline_run_params:
   - git-repo
   - git-revision

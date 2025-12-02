@@ -137,8 +137,6 @@ rule_data:
     effective_on: "2024-04-13T00:00:00Z"
   - name: com.redhat.component
     effective_on: "2024-04-13T00:00:00Z"
-  - name: cpe
-    effective_on: "2026-02-01T00:00:00Z"
 
   # https://conforma.dev/docs/policy/packages/release_labels.html#labels__required_labels
   fbc_required_labels: []

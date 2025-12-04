@@ -80,6 +80,17 @@ pipeline-required-tasks:
         - git-clone-oci-ta
         - modelcar-oci-ta
         - sast-snyk-check-oci-ta
+  helm:
+    - effective_on: "2025-12-01T00:00:00Z"
+      tasks:
+        - init
+        - git-clone-oci-ta
+        - prefetch-dependencies-oci-ta
+        - build-helm-chart-oci-ta
+        - source-build-oci-ta
+        - sast-shell-check-oci-ta
+        - sast-unicode-check-oci-ta
+
 
 # https://conforma.dev/docs/policy/packages/release_tasks.html
 required-tasks:

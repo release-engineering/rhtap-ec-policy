@@ -5,7 +5,4 @@
 # An image that contains an rpm that is associated with a valid repository id in the public mapping will not be
 # properly understood by clair and third-party scanners.
 
-extras:
-- rhceph-8-tools-for-rhel-9-aarch64-rpms
-- rhceph-8-tools-for-rhel-9-aarch64-source-rpms
-- rhceph-8-tools-for-rhel-9-aarch64-debug-rpms
+extras: []

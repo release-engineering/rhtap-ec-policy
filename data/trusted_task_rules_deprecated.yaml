@@ -1,0 +1,63 @@
+rule_data:
+  trusted_task_rules:
+    allow:
+      konflux-defaults-deprecated:
+        # These locations are deprecated and will be removed in the future. All
+        # the task definitions published here are also available in
+        # quay.io/konflux-ci/tekton-catalog, but we'll keep allowing these for
+        # a while to give people some time to update their pipelines.
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-*
+        - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
+
+    deny:
+      konflux-defaults-deprecated:
+        #-------------------------------------
+        # konflux-ci/integration-service-catalog
+        #-------------------------------------
+
+        # clair-scan
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-clair-scan
+          versions: ['<0.2']
+          effective_on: "2026-08-17T00:00:00Z"
+
+        # clamav-scan
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-clamav-scan
+          versions: ['<0.2']
+          effective_on: "2026-08-17T00:00:00Z"
+
+        # deprecated-image-check
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-deprecated-image-check
+          versions: ['<0.4']
+          effective_on: "2026-07-18T00:00:00Z"
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-deprecated-image-check
+          versions: ['<0.5']
+          effective_on: "2026-08-17T00:00:00Z"
+
+        # fbc-fips-check
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-fbc-fips-check
+          versions: ['<0.1']
+
+        # fbc-target-index-pruning-check
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-fbc-target-index-pruning-check
+          versions: ['<0.1']
+
+        # fips-operator-bundle-check
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-fips-operator-bundle-check
+          versions: ['<0.1']
+
+        # sbom-json-check
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-sbom-json-check
+          versions: ['<0.2']
+          effective_on: "2026-08-17T00:00:00Z"
+
+        # validate-fbc
+        - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-validate-fbc
+          versions: ['<0.1']
+
+        #-------------------------------------
+        # konflux-ci/konflux-vanguard
+        #-------------------------------------
+
+        # rpms-signature-scan
+        - pattern: oci://quay.io/konflux-ci/konflux-vanguard/task-rpms-signature-scan
+          versions: ['<0.1']

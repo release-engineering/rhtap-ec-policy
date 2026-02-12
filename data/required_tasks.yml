@@ -15,7 +15,7 @@ pipeline-required-tasks:
     - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - [buildah, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
-        - clair-scan
+        - [clair-scan, roxctl-scan]
         - clamav-scan
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
@@ -30,7 +30,7 @@ pipeline-required-tasks:
     - effective_on: "2025-04-01T00:00:00Z"
       tasks:
         - [buildah, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
-        - clair-scan
+        - [clair-scan, roxctl-scan]
         - clamav-scan
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
@@ -44,7 +44,7 @@ pipeline-required-tasks:
   nodejs:
     - effective_on: "2025-04-01T00:00:00Z"
       tasks:
-        - clair-scan
+        - [clair-scan, roxctl-scan]
         - clamav-scan
         - deprecated-image-check
         - [git-clone, git-clone-oci-ta]
@@ -96,7 +96,7 @@ pipeline-required-tasks:
 required-tasks:
   - effective_on: "2025-04-01T00:00:00Z"
     tasks:
-      - clair-scan
+      - [clair-scan, roxctl-scan]
       - clamav-scan
       - [git-clone, git-clone-oci-ta]
       - init

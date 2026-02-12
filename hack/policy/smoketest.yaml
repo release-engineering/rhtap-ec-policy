@@ -11,6 +11,7 @@ spec:
       data:
         - ./data
         - oci::quay.io/konflux-ci/tekton-catalog/data-acceptable-bundles:latest
+        - oci::quay.io/konflux-ci/konflux-vanguard/data-acceptable-bundles
       policy:
         - oci::quay.io/enterprise-contract/ec-release-policy:konflux
       config:

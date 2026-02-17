@@ -3169,6 +3169,9 @@ rule_data:
     - "rhceph-7-tools-for-rhel-9-x86_64-debug-rpms"
     - "rhceph-7-tools-for-rhel-9-x86_64-rpms"
     - "rhceph-7-tools-for-rhel-9-x86_64-source-rpms"
+    - "rhceph-8-tools-for-rhel-8-aarch64-debug-rpms"
+    - "rhceph-8-tools-for-rhel-8-aarch64-rpms"
+    - "rhceph-8-tools-for-rhel-8-aarch64-source-rpms"
     - "rhceph-8-tools-for-rhel-8-ppc64le-debug-rpms"
     - "rhceph-8-tools-for-rhel-8-ppc64le-rpms"
     - "rhceph-8-tools-for-rhel-8-ppc64le-source-rpms"
@@ -3178,9 +3181,9 @@ rule_data:
     - "rhceph-8-tools-for-rhel-8-x86_64-debug-rpms"
     - "rhceph-8-tools-for-rhel-8-x86_64-rpms"
     - "rhceph-8-tools-for-rhel-8-x86_64-source-rpms"
-    - rhceph-8-tools-for-rhel-9-aarch64-debug-rpms
-    - rhceph-8-tools-for-rhel-9-aarch64-rpms
-    - rhceph-8-tools-for-rhel-9-aarch64-source-rpms
+    - "rhceph-8-tools-for-rhel-9-aarch64-debug-rpms"
+    - "rhceph-8-tools-for-rhel-9-aarch64-rpms"
+    - "rhceph-8-tools-for-rhel-9-aarch64-source-rpms"
     - "rhceph-8-tools-for-rhel-9-ppc64le-debug-rpms"
     - "rhceph-8-tools-for-rhel-9-ppc64le-rpms"
     - "rhceph-8-tools-for-rhel-9-ppc64le-source-rpms"

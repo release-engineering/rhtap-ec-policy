@@ -13,6 +13,7 @@ rule_data:
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal
   - quay.io/konflux-ci/git-clone
+  - quay.io/konflux-ci/rust-builder
   - brew.registry.redhat.io/rh-osbs/openshift-golang-builder
   - brew.registry.redhat.io/rh-osbs/openshift-ose-operator-registry-rhel9
   - brew.registry.redhat.io/rh-osbs/rhacm2-nodejs-parent

@@ -286,3 +286,7 @@ rule_data:
 
   allowed_rpm_build_pipelines:
     - build-rpm-package
+  
+  allowed_maven_repositories:
+    - "https://indy.corp.redhat.com"
+    - "https://maven.repository.redhat.com/ga/"

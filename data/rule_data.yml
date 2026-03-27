@@ -237,28 +237,42 @@ rule_data:
 
   # No releases during year-end shutdown
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__date_restriction
+  # Todo: It would be better if the applicable Conforma check could match any year, so we wouldn't
+  # need to add each year's dates here.
   disallowed_dates:
-  # EOY 2024
-  - 2024-12-24
-  - 2024-12-25
-  - 2024-12-26
-  - 2024-12-27
-  - 2024-12-28
-  - 2024-12-29
-  - 2024-12-30
-  - 2024-12-31
-  - 2025-01-01
-  # EOY 2025
-  - 2025-12-23
-  - 2025-12-24
-  - 2025-12-25
-  - 2025-12-26
-  - 2025-12-27
-  - 2025-12-28
-  - 2025-12-29
-  - 2025-12-30
-  - 2025-12-31
-  - 2026-01-01
+  # EOY 2028
+  - 2028-12-23
+  - 2028-12-24
+  - 2028-12-25
+  - 2028-12-26
+  - 2028-12-27
+  - 2028-12-28
+  - 2028-12-29
+  - 2028-12-30
+  - 2028-12-31
+  - 2029-01-01
+  # EOY 2027
+  - 2027-12-23
+  - 2027-12-24
+  - 2027-12-25
+  - 2027-12-26
+  - 2027-12-27
+  - 2027-12-28
+  - 2027-12-29
+  - 2027-12-30
+  - 2027-12-31
+  - 2028-01-01
+  # EOY 2026
+  - 2026-12-23
+  - 2026-12-24
+  - 2026-12-25
+  - 2026-12-26
+  - 2026-12-27
+  - 2026-12-28
+  - 2026-12-29
+  - 2026-12-30
+  - 2026-12-31
+  - 2027-01-01
 
 # Usage: https://conforma.dev/docs/policy/packages/release_olm.html#olm__required_olm_features_annotations_provided
   required_olm_features_annotations:

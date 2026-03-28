@@ -8583,6 +8583,10 @@ rule_data:
     - "rhel-8-for-x86_64-supplementary-eus-source-rpms__8_DOT_8"
     - "rhel-8-for-x86_64-supplementary-rpms"
     - "rhel-8-for-x86_64-supplementary-source-rpms"
+    - rhel-9-appstream
+    - rhel-9-appstream-source
+    - rhel-9-baseos
+    - rhel-9-baseos-source
     - "rhel-9-for-aarch64-appstream-debug-rpms"
     - "rhel-9-for-aarch64-appstream-e4s-debug-rpms"
     - "rhel-9-for-aarch64-appstream-e4s-debug-rpms__9_DOT_0"

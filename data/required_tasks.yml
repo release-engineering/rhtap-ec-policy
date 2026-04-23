@@ -6,7 +6,7 @@ pipeline-required-tasks:
       tasks:
         - [buildah, buildah-10gb, buildah-6gb, buildah-8gb, buildah-remote, buildah-oci-ta, buildah-remote-oci-ta]
         - deprecated-image-check
-        - [fbc-fips-check, fbc-fips-check-oci-ta]
+        - [fbc-fips-check, fbc-fips-check-oci-ta, fbc-fips-check-matrix-based-oci-ta]
         - [fbc-related-image-check, validate-fbc]
         - fbc-target-index-pruning-check
         - [git-clone, git-clone-oci-ta]

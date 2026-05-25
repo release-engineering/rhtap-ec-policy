@@ -1,0 +1,34 @@
+name: Push data bundle
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  push-data-bundle:
+    runs-on: ubuntu-latest
+    container:
+      image: quay.io/conforma/cli:latest
+    env:
+      DATA_BUNDLE_REPO: quay.io/conforma/policy-data
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Quay
+        run: |
+          ec opa login -u "${{ secrets.QUAY_USERNAME }}" -p "${{ secrets.QUAY_PASSWORD }}" quay.io
+
+      - name: Build and push data bundle
+        run: |
+          DATA_BUNDLE_TAG=$(date '+%s')
+          ec opa build -b data/ -o bundle.tar.gz
+          ec opa push "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" bundle.tar.gz
+          ec opa push "${DATA_BUNDLE_REPO}:latest" bundle.tar.gz

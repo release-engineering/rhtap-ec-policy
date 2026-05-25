@@ -1,0 +1,46 @@
+name: Push data bundle
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  push-data-bundle:
+    runs-on: ubuntu-latest
+    env:
+      DATA_BUNDLE_REPO: quay.io/conforma/policy-data
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ec-cli
+        run: |-
+          mkdir -p "${HOME}/.local/bin"
+          curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          chmod +x "${HOME}/.local/bin/ec"
+          ec version
+
+      - name: Install oras
+        run: |-
+          ORAS_VERSION="1.2.2"
+          curl -sL "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" | tar xz -C "${HOME}/.local/bin" oras
+          oras version
+
+      - name: Build OPA data bundle
+        run: ec opa build -b data/ -o bundle.tar.gz
+
+      - name: Login to Quay
+        run: oras login -u "${{ secrets.QUAY_USERNAME }}" -p "${{ secrets.QUAY_PASSWORD }}" quay.io
+
+      - name: Push data bundle
+        run: |
+          DATA_BUNDLE_TAG=$(date '+%s')
+          oras push "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" bundle.tar.gz
+          oras push "${DATA_BUNDLE_REPO}:latest" bundle.tar.gz

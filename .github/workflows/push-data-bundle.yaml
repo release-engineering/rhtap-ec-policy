@@ -34,7 +34,7 @@ jobs:
           oras version
 
       - name: Build OPA data bundle
-        run: ec opa build -b data/ -o bundle.tar.gz
+        run: ec opa build data/ -o bundle.tar.gz
 
       - name: Login to Quay
         run: oras login -u "${{ secrets.QUAY_USERNAME }}" -p "${{ secrets.QUAY_PASSWORD }}" quay.io

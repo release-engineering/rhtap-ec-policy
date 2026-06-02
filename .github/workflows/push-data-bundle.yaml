@@ -33,8 +33,10 @@ jobs:
           curl -sL "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" | tar xz -C "${HOME}/.local/bin" oras
           oras version
 
-      - name: Build OPA data bundle
-        run: ec opa build data/ -o bundle.tar.gz
+      - name: Build and extract OPA data bundle
+        run: |
+          ec opa build data/ -o bundle.tar.gz
+          tar xzf bundle.tar.gz data.json
 
       - name: Login to Quay
         run: oras login -u "${{ secrets.QUAY_USERNAME }}" -p "${{ secrets.QUAY_PASSWORD }}" quay.io
@@ -42,5 +44,5 @@ jobs:
       - name: Push data bundle
         run: |
           DATA_BUNDLE_TAG=$(date '+%s')
-          oras push "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" bundle.tar.gz
-          oras push "${DATA_BUNDLE_REPO}:latest" bundle.tar.gz
+          oras push "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json
+          oras push "${DATA_BUNDLE_REPO}:latest" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json

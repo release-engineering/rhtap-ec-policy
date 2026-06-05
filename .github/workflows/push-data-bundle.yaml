@@ -23,7 +23,7 @@ jobs:
       - name: Install ec-cli
         run: |-
           mkdir -p "${HOME}/.local/bin"
-          curl -sL https://github.com/enterprise-contract/ec-cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          curl -sL https://github.com/conforma/cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
           chmod +x "${HOME}/.local/bin/ec"
           ec version
 
@@ -33,7 +33,7 @@ jobs:
           curl -sL "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" | tar xz -C "${HOME}/.local/bin" oras
           oras version
 
-      - name: Build and extract OPA data bundle
+      - name: Build OPA bundle and extract merged data.json
         run: |
           ec opa build data/ -o bundle.tar.gz
           tar xzf bundle.tar.gz -C .

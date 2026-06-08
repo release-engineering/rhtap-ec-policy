@@ -84,6 +84,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     aws-load-balancer-operator:
       - "1.0"
       - "1.1"
@@ -165,6 +166,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     compliance-operator:
       - "0.1"
       - "1.4"
@@ -299,6 +301,8 @@ rule_data:
       - "4.18"
       - "4.19"
       - "4.20"
+      - "4.21"
+      - "4.22"
     eap:
       - "2.2"
       - "2.3"
@@ -366,6 +370,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     glance-operator:
       - "1.0"
     heat-operator:
@@ -385,6 +390,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     ironic-operator:
       - "1.0"
     jaeger-product:
@@ -456,6 +462,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     kubevirt-hyperconverged:
       - "4.12"
       - "4.13"
@@ -505,6 +512,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     logic-operator:
       - "1.37"
     logic-operator-rhel8:
@@ -575,6 +583,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     model-validation-operator:
       - "0.0"
       - "0.1"
@@ -662,6 +671,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     node-healthcheck-operator:
       - "0.10"
       - "0.11"
@@ -919,6 +929,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     placement-operator:
       - "1.0"
     policy-controller-operator:
@@ -941,6 +952,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     quay-bridge-operator:
       - "3.10"
       - "3.11"
@@ -1149,6 +1161,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     security-profiles-operator:
       - "0.10"
       - "0.8"
@@ -1221,6 +1234,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     sriov-network-operator:
       - "4.12"
       - "4.13"
@@ -1232,6 +1246,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     storage-base-remediation:
       - "0.1"
     storage-based-remediation:
@@ -1251,6 +1266,7 @@ rule_data:
     support-log-gather-operator:
       - "4.20"
       - "4.21"
+      - "4.22"
     swift-operator:
       - "1.0"
     tang-operator:
@@ -1300,6 +1316,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     volsync-product:
       - "0.10"
       - "0.11"

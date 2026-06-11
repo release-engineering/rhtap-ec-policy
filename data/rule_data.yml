@@ -227,6 +227,10 @@ rule_data:
       value: "true"
     - name: hermeto:pip:package:binary
       value: "true"
+      except_when:
+      - purl_qualifier: repository_url
+        patterns:
+        - "^https://packages\\.redhat\\.com/trusted-libraries/python/.*"
 
   # No releases on Fridays and weekends
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__weekday_restriction

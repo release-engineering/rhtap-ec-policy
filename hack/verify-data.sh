@@ -41,7 +41,7 @@ for tag in konflux latest; do
   # The command requires --file to be used at least once. This sets the input to be verified by the
   # policy rules. However, here we are verifying the data sources which does not require an input.
   # So we use a dummy input file instead.
-  ec validate input --policy "${POLICY_YAML}" --output yaml --file <(echo '{}') | yq .
+  ec validate input --policy "${POLICY_YAML}" --output yaml --file hack/empty.json | yq .
   echo "✅ Data validated ($tag tag)"
 
   rm -f "${POLICY_YAML}"

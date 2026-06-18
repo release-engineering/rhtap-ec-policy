@@ -897,6 +897,9 @@ rule_data:
       - "0.1"
       - "0.2"
       - "1.0"
+      - "1.0.1"
+      - "1.0.2"
+      - "1.1"
     openstack-ansibleee-operator:
       - "1.0"
     openstack-baremetal-operator:

@@ -6,7 +6,7 @@ description: >-
 sources:
   - policy:
       # Expecting $POLICY_TAG to be envsubst'ed to either konflux or latest
-      - oci::quay.io/enterprise-contract/ec-release-policy:$POLICY_TAG
+      - oci::quay.io/conforma/release-policy:$POLICY_TAG
 
       # Use this instead if you want to run against the latest from git
       #- github.com/enterprise-contract/ec-policies//policy/lib?ref=main

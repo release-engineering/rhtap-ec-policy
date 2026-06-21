@@ -1,0 +1,4 @@
+trusted_task_rules:
+  allow:
+    - name: Implicitly trust all tasks from konflux-ci/tekton-catalog
+      pattern: oci://quay.io/konflux-ci/tekton-catalog/*

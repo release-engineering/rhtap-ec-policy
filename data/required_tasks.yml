@@ -90,7 +90,13 @@ pipeline-required-tasks:
         - source-build-oci-ta
         - sast-shell-check-oci-ta
         - sast-unicode-check-oci-ta
-
+  oci-verify-import:
+    - effective_on: "2026-06-22T00:00:00Z"
+      tasks:
+        - oci-verify-import
+        - clamav-scan
+        - [sast-shell-check, sast-shell-check-oci-ta]
+        - [sast-unicode-check, sast-unicode-check-oci-ta]
 
 # https://conforma.dev/docs/policy/packages/release_tasks.html
 required-tasks:

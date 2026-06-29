@@ -15,18 +15,19 @@ jobs:
   push-data-bundle:
     runs-on: ubuntu-latest
     container:
-      image: quay.io/conforma/cli:latest
+      image: quay.io/konflux-ci/task-runner:v1
     env:
       DATA_BUNDLE_REPO: quay.io/conforma/policy-data
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install oras
+      - name: Install ec-cli
         run: |-
-          ORAS_VERSION="1.2.2"
-          curl -sL "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" | tar xz -C /usr/local/bin oras
-          oras version
+          mkdir -p "${HOME}/.local/bin"
+          curl -sL https://github.com/conforma/cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
+          chmod +x "${HOME}/.local/bin/ec"
+          ec version
 
       - name: Build OPA bundle and extract merged data.json
         run: |

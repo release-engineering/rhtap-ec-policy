@@ -151,6 +151,7 @@ rule_data:
   # https://conforma.dev/docs/policy/packages/release_test.html
   informative_tests:
   - ecosystem-cert-preflight-checks
+  - fbc-inject-lifecycle-oci-ta
   - fips-operator-bundle-check
   - fips-operator-bundle-check-oci-ta
   - coverity-availability-check

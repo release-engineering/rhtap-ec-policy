@@ -7,14 +7,30 @@ set -o nounset
 cd "$(git rev-parse --show-toplevel)"
 
 # Verify known_rpm_repositories.yml has been updated with entries from extra_rpm_repositories.yml.
-outdated="$(./hack/render-known-rpm-repositories.sh | diff data/known_rpm_repositories.yml - || true)"
-if [[ -n "${outdated}" && "${outdated}" != "[]" ]]; then
-    echo "Out of date items found:"
-    echo "${outdated}"
-    echo "❌ Run hack/update-known-rpm-repositories.sh"
-    exit 1
+# Only check freshness against the remote source when RPM repository files are part of the change.
+# The scheduled update_rpm_repositories workflow keeps the file in sync automatically.
+rpm_files_changed=false
+if git diff --name-only "${GITHUB_BASE_REF:-main}...HEAD" -- \
+    data/known_rpm_repositories.yml \
+    hack/extra_rpm_repositories.yml \
+    hack/suppressed_rpm_repositories.yml \
+    hack/render-known-rpm-repositories.sh \
+    hack/update-known-rpm-repositories.sh 2>/dev/null | grep -q .; then
+  rpm_files_changed=true
 fi
-echo '✅ data/known_rpm_repositories.yml has expected extras'
+
+if [[ "${rpm_files_changed}" == "true" ]]; then
+  outdated="$(./hack/render-known-rpm-repositories.sh | diff data/known_rpm_repositories.yml - || true)"
+  if [[ -n "${outdated}" && "${outdated}" != "[]" ]]; then
+      echo "Out of date items found:"
+      echo "${outdated}"
+      echo "❌ Run hack/update-known-rpm-repositories.sh"
+      exit 1
+  fi
+  echo '✅ data/known_rpm_repositories.yml has expected extras'
+else
+  echo '⏭️  Skipping RPM repositories freshness check (no relevant files changed)'
+fi
 
 # The konflux tag is what is used in Konflux prod. It is updated weekly. For reference:
 # https://github.com/redhat-appstudio/infra-deployments/blob/main/components/enterprise-contract/ecp.yaml

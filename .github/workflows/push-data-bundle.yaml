@@ -25,9 +25,8 @@ jobs:
 
       - name: Install ec-cli
         run: |-
-          mkdir -p "${HOME}/.local/bin"
-          curl -sL https://github.com/conforma/cli/releases/download/snapshot/ec_linux_amd64 -o "${HOME}/.local/bin/ec"
-          chmod +x "${HOME}/.local/bin/ec"
+          curl -sL https://github.com/conforma/cli/releases/download/snapshot/ec_linux_amd64 -o /usr/local/bin/ec
+          chmod +x /usr/local/bin/ec
           ec version
 
       - name: Build OPA bundle and extract merged data.json

@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: quay.io/konflux-ci/task-runner:v1
+      options: --user root
     env:
       DATA_BUNDLE_REPO: quay.io/conforma/policy-data
     steps:

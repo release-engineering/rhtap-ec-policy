@@ -8,6 +8,8 @@ rule_data:
         # a while to give people some time to update their pipelines.
         # Tracked in https://redhat.atlassian.net/browse/EC-2074
         - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-*
+
+        # quay.io/konflux-ci/konflux-vanguard denied below effective Sep 24th 2026
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
 
         # Todo: This is used by just one team, so it would be better to define
@@ -75,9 +77,18 @@ rule_data:
         # konflux-ci/konflux-vanguard
         #-------------------------------------
 
-        # rpms-signature-scan
+        # Tasks were briefly published here during decentralization and are now
+        # only updated under tekton-catalog. Deny ancient rpms-signature-scan
+        # versions immediately; deny the whole location after the grace period.
+        # Denial takes priority over the konflux-vanguard/* allow above.
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/task-rpms-signature-scan
           versions: ['<0.1']
+        - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
+          message: >
+            Tasks under konflux-vanguard are no longer trusted.
+            Use the equivalent from quay.io/konflux-ci/tekton-catalog instead.
+          effective_on: "2026-09-24T00:00:00Z"
+
 
         #-------------------------------------
         # konflux-ci/ose-osc-tenant

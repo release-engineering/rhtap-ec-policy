@@ -18,7 +18,7 @@ jobs:
       image: quay.io/konflux-ci/task-runner:v1
       options: --user root
     env:
-      DATA_BUNDLE_REPO: quay.io/conforma/policy-data
+      DATA_BUNDLE_REPO: quay.io/redhat-konflux/policy-data
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

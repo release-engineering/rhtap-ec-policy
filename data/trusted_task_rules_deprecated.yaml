@@ -9,6 +9,12 @@ rule_data:
         - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-*
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
 
+        # Todo: This is used by just one team, so it would be better to define
+        # a separate data source that can be referenced in registry-ose-osc-stage.yaml
+        # and registry-ose-osc.yaml in the konflux-release-data repo in
+        # config/stone-prd-rh01.pg1f.p1/product/EnterpriseContractPolicy
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+
     deny:
       konflux-defaults-deprecated:
         #-------------------------------------
@@ -60,4 +66,12 @@ rule_data:
 
         # rpms-signature-scan
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/task-rpms-signature-scan
+          versions: ['<0.1']
+
+        #-------------------------------------
+        # konflux-ci/ose-osc-tenant
+        #-------------------------------------
+
+        # build-dm-verity-image
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
           versions: ['<0.1']

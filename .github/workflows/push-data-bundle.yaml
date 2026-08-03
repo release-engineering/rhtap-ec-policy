@@ -39,6 +39,9 @@ jobs:
 
       - name: Push data bundle
         run: |
+          ANNOTATIONS="--annotation org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+          ANNOTATIONS="${ANNOTATIONS} --annotation org.opencontainers.image.revision=${GITHUB_SHA}"
+          ANNOTATIONS="${ANNOTATIONS} --annotation org.opencontainers.image.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/${GITHUB_SHA}/data"
           DATA_BUNDLE_TAG=$(date '+%s')
-          oras push "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json
-          oras push "${DATA_BUNDLE_REPO}:latest" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json
+          oras push ${ANNOTATIONS} "${DATA_BUNDLE_REPO}:${DATA_BUNDLE_TAG}" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json
+          oras push ${ANNOTATIONS} "${DATA_BUNDLE_REPO}:latest" data.json:application/vnd.cncf.openpolicyagent.data.layer.v1+json

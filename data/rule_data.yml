@@ -240,12 +240,19 @@ rule_data:
   - saturday
   - sunday
 
-  # No releases during year-end shutdown
+  # No releases on holidays and other shutdown dates.
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__date_restriction
-  # Todo: It would be better if the applicable Conforma check could match any year, so we wouldn't
-  # need to add each year's dates here.
+  # The page at https://redhat.atlassian.net/wiki/spaces/SP/pages/333966610/Pipeline+Temperature
+  # is used as a source.
+  #
+  # It would be better if the we could conveniently specify ranges, and wildcard years.
+  # See https://redhat.atlassian.net/browse/EC-2075 which aims to make that possible.
   disallowed_dates:
-  # EOY 2028
+  # Holiday Shutdown 2028
+  - 2028-12-19
+  - 2028-12-20
+  - 2028-12-21
+  - 2028-12-22
   - 2028-12-23
   - 2028-12-24
   - 2028-12-25
@@ -256,7 +263,12 @@ rule_data:
   - 2028-12-30
   - 2028-12-31
   - 2029-01-01
-  # EOY 2027
+
+  # Holiday Shutdown 2027
+  - 2027-12-19
+  - 2027-12-20
+  - 2027-12-21
+  - 2027-12-22
   - 2027-12-23
   - 2027-12-24
   - 2027-12-25
@@ -267,7 +279,13 @@ rule_data:
   - 2027-12-30
   - 2027-12-31
   - 2028-01-01
-  # EOY 2026
+
+  # Holiday Shutdown 2026
+  # (Should also include 2026-12-18 from EOD but we can't specify that currently)
+  - 2026-12-19
+  - 2026-12-20
+  - 2026-12-21
+  - 2026-12-22
   - 2026-12-23
   - 2026-12-24
   - 2026-12-25
@@ -278,6 +296,32 @@ rule_data:
   - 2026-12-30
   - 2026-12-31
   - 2027-01-01
+
+  # Thanksgiving 2026
+  # (Should also include 2026-11-24 from EOD but we can't specify that currently)
+  - 2026-11-25
+  - 2026-11-26
+  - 2026-11-27
+  - 2026-11-28
+  - 2026-11-29
+
+  # Labor Day 2026
+  - 2026-09-07
+
+  # Red Hat Recharge 2026
+  - 2026-08-27
+  - 2026-08-28
+  - 2026-08-29
+  - 2026-08-30
+
+  # Independence Day 2026
+  - 2026-07-02
+  - 2026-07-03
+  - 2026-07-04
+
+  # Juneteenth 2026
+  - 2026-06-18
+  - 2026-06-19
 
 # Usage: https://conforma.dev/docs/policy/packages/release_olm.html#olm__required_olm_features_annotations_provided
   required_olm_features_annotations:

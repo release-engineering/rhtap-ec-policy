@@ -10,6 +10,14 @@
 # https://github.com/conforma/policy/pull/1758
 
 rule_data:
+  # With this set to true, we're turning on the new trusted task
+  # rules for everyone by default. (It means that any team with a
+  # custom tasks that needs to be considered trusted must have an
+  # allow rule defined in their ruleData that permits that task.
+  # It also means we can stop trying to fix the buggy acceptable
+  # bundle update CI.)
+  trusted_task_rules_enabled: true
+
   trusted_task_rules:
     # Note the values of the keys under `deny:` and `allow:` are not signficant.
     # They are needed so trusted task rules from from different sources can be

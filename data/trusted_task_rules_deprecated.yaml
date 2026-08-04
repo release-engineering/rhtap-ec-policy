@@ -9,6 +9,20 @@ rule_data:
         - pattern: oci://quay.io/konflux-ci/integration-service-catalog/task-*
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
 
+        # Todo: This is used by just one team, so it would be better to define
+        # a separate data source that can be referenced in registry-ose-osc-stage.yaml
+        # and registry-ose-osc.yaml in the konflux-release-data repo in
+        # config/stone-prd-rh01.pg1f.p1/product/EnterpriseContractPolicy
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+
+        # Todo: Similarly we're intending to move this matcher so it's only used for
+        # the RoK builds, instead of everyone. Putting it here temporarily so RoK builds
+        # continue to work after we cut over to the the new trusted task mechanism.
+        # See also the following PRs. Once those PRs are merged this could be removed:
+        # - https://gitlab.cee.redhat.com/rhel-on-konflux/rpmbuild-pipeline/-/merge_requests/348
+        # - https://gitlab.cee.redhat.com/releng/konflux-release-data/-/merge_requests/21073
+        - pattern: git+https://gitlab.cee.redhat.com/rhel-on-konflux/rpmbuild-pipeline.git//task/*
+
     deny:
       konflux-defaults-deprecated:
         #-------------------------------------
@@ -60,4 +74,12 @@ rule_data:
 
         # rpms-signature-scan
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/task-rpms-signature-scan
+          versions: ['<0.1']
+
+        #-------------------------------------
+        # konflux-ci/ose-osc-tenant
+        #-------------------------------------
+
+        # build-dm-verity-image
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
           versions: ['<0.1']

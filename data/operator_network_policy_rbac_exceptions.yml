@@ -726,6 +726,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     ocs-operator:
       - "4.11"
       - "4.12"
@@ -738,6 +739,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     octavia-operator:
       - "1.0"
     odf-compose-operator:
@@ -757,14 +759,17 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odf-dependencies:
       - "4.18"
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odf-external-snapshotter-operator:
       - "4.20"
       - "4.21"
+      - "4.22"
     odf-multicluster-orchestrator:
       - "4.11"
       - "4.12"
@@ -777,6 +782,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odf-operator:
       - "4.11"
       - "4.12"
@@ -789,6 +795,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odf-prometheus-operator:
       - "4.16"
       - "4.17"
@@ -796,6 +803,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odr-cluster-operator:
       - "4.11"
       - "4.12"
@@ -808,6 +816,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     odr-hub-operator:
       - "4.11"
       - "4.12"
@@ -820,6 +829,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     openperouter-operator:
       - "4.21"
     openshift-builds-operator:
@@ -1004,6 +1014,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     red-hat-camel-k:
       - "1.10"
       - "1.4"

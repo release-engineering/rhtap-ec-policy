@@ -371,27 +371,18 @@ rule_data:
 
         # prefetch-dependencies
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies
-          versions: ['<0.3']
-          effective_on: "2026-08-06T00:00:00Z"
-        - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies
-          versions: ['<0.4']
-          effective_on: "2026-09-05T00:00:00Z"
+          versions: ['<0.7.1']
+          effective_on: "2026-08-11T00:00:00Z"
 
         # prefetch-dependencies-oci-ta
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies-oci-ta
-          versions: ['<0.3']
-          effective_on: "2026-08-06T00:00:00Z"
-        - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies-oci-ta
-          versions: ['<0.4']
-          effective_on: "2026-09-05T00:00:00Z"
+          versions: ['<0.7.1']
+          effective_on: "2026-08-11T00:00:00Z"
 
         # prefetch-dependencies-oci-ta-min
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies-oci-ta-min
-          versions: ['<0.3']
-          effective_on: "2026-08-06T00:00:00Z"
-        - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies-oci-ta-min
-          versions: ['<0.4']
-          effective_on: "2026-09-05T00:00:00Z"
+          versions: ['<0.7.1']
+          effective_on: "2026-08-11T00:00:00Z"
 
         # provision-env-with-ephemeral-namespace
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-provision-env-with-ephemeral-namespace

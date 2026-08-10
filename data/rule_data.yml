@@ -9,6 +9,7 @@ rule_data:
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9
   - quay.io/konflux-ci/bazel7-ubi9
+  - quay.io/konflux-ci/bazel8-ubi9
   - quay.io/konflux-ci/operator-sdk-builder
   - quay.io/konflux-ci/yarn3-nodejs20-ubi9-minimal
   - quay.io/konflux-ci/yarn4-nodejs22-ubi9-minimal

@@ -533,7 +533,7 @@ rule_data:
 
         # show-sbom
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-show-sbom
-          versions: ['<0.1']
+          effective_on: "2026-09-05T00:00:00Z"
 
         # show-sbom-rhdh
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-show-sbom-rhdh
@@ -565,7 +565,6 @@ rule_data:
 
         # summary
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-summary
-          versions: ['<0.2']
           effective_on: "2026-09-05T00:00:00Z"
 
         # tkn-bundle

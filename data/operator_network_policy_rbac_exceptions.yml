@@ -121,6 +121,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     cincinnati-operator:
       - "4.9"
       - "5.0"
@@ -574,6 +575,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     mcp-gateway:
       - "0.6"
     metallb-operator:
@@ -741,6 +743,8 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+    ocs-tls-profiles:
+      - "4.22"
     octavia-operator:
       - "1.0"
     odf-compose-operator:
@@ -830,6 +834,8 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
+    odr-volsync-plugin-operator:
       - "4.22"
     openperouter-operator:
       - "4.21"
@@ -1157,6 +1163,7 @@ rule_data:
       - "4.19"
       - "4.20"
       - "4.21"
+      - "4.22"
     run-once-duration-override-operator:
       - "1.0"
       - "1.1"

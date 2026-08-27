@@ -1303,6 +1303,7 @@ rule_data:
       - "0.21"
       - "0.22"
       - "0.23"
+      - "0.24"
     support-log-gather-operator:
       - "4.20"
       - "4.21"

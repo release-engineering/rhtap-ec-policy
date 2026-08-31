@@ -74,6 +74,7 @@ rule_data:
       - "1.1"
       - "1.2"
       - "1.3"
+      - "1.4"
     aws-efs-csi-driver-operator:
       - "4.12"
       - "4.13"
@@ -296,6 +297,7 @@ rule_data:
       - "1.1"
       - "1.2"
       - "1.3"
+      - "1.4"
     dpu-network-operator:
       - "4.12"
       - "4.13"
@@ -506,6 +508,7 @@ rule_data:
       - "1.1"
       - "1.2"
       - "1.3"
+      - "1.4"
     local-storage-operator:
       - "4.12"
       - "4.13"

@@ -231,6 +231,9 @@ rule_data:
       - purl_qualifier: repository_url
         patterns:
         - "^https://packages\\.redhat\\.com/trusted-libraries/python/.*"
+      - purl_qualifier: repository_url
+        patterns:
+        - "^https://packages\\.redhat\\.com/lightwell/.*"
 
   # No releases on Fridays and weekends
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__weekday_restriction

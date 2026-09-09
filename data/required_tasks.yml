@@ -104,6 +104,12 @@ pipeline-required-tasks:
         - source-to-sdist
         - fromager-build-wheels
         - clamav-scan
+  python-sdist-ingest:
+    - effective_on: "2026-09-08T00:00:00Z"
+      tasks:
+        - fetch-source
+        - fromager-build-sdist
+        - clamav-scan
 
 # https://conforma.dev/docs/policy/packages/release_tasks.html
 required-tasks:

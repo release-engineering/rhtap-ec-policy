@@ -102,7 +102,7 @@ pipeline-required-tasks:
       tasks:
         - git-clone-oci-ta
         - source-to-sdist
-        - fromager-build-wheels
+        - python-fromager-build-wheels
         - clamav-scan
   python-sdist-ingest:
     - effective_on: "2026-09-08T00:00:00Z"

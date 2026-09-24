@@ -293,17 +293,17 @@ rule_data:
         # git-clone
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-git-clone
           versions: ['<0.2']
-          effective_on: "2026-09-05T00:00:00Z"
+          effective_on: "2026-09-12T00:00:00Z"
 
         # git-clone-oci-ta
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-git-clone-oci-ta
           versions: ['<0.2']
-          effective_on: "2026-09-05T00:00:00Z"
+          effective_on: "2026-09-12T00:00:00Z"
 
         # git-clone-oci-ta-min
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-git-clone-oci-ta-min
           versions: ['<0.2']
-          effective_on: "2026-09-05T00:00:00Z"
+          effective_on: "2026-09-12T00:00:00Z"
 
         # github-sarif-upload
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-github-sarif-upload

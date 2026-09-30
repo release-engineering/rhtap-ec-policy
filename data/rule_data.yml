@@ -108,6 +108,7 @@ rule_data:
     description: Name of the vendor.
     values:
     - 'Red Hat, Inc.'
+    - 'Red Hat, LLC'
   - name: version
     description: Version of the image.
   - name: org.opencontainers.image.created

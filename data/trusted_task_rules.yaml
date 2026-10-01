@@ -251,6 +251,10 @@ rule_data:
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-fbc-fips-prepare-oci-ta
           versions: ['<0.1']
 
+        # fbc-inject-lifecycle-oci-ta
+        - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-fbc-inject-lifecycle-oci-ta
+          versions: ['<0.1']
+
         # fbc-related-image-check
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-fbc-related-image-check
           versions: ['<0.2']
@@ -595,7 +599,7 @@ rule_data:
 
         # validate-fbc
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-validate-fbc
-          versions: ['<0.1']
+          versions: ['<0.3']
 
         # verify-enterprise-contract
         - pattern: oci://quay.io/konflux-ci/tekton-catalog/task-verify-enterprise-contract

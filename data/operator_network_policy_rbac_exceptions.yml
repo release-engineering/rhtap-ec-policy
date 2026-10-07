@@ -1227,7 +1227,6 @@ rule_data:
       - "0.7"
       - "0.8"
       - "0.9"
-      - "5.8"
     serverless-operator:
       - "1.20"
       - "1.21"
@@ -1306,7 +1305,6 @@ rule_data:
     storage-based-remediation:
       - "0.2"
       - "0.3"
-      - "5.8"
     submariner:
       - "0.13"
       - "0.14"

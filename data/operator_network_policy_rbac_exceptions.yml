@@ -336,6 +336,7 @@ rule_data:
       - "0.6"
       - "0.7"
       - "0.8"
+      - "5.8"
     file-integrity-operator:
       - "0.1"
       - "1.0"
@@ -566,6 +567,7 @@ rule_data:
       - "0.5"
       - "0.6"
       - "0.7"
+      - "5.8"
     manila-operator:
       - "1.0"
     mariadb-operator:
@@ -702,6 +704,7 @@ rule_data:
       - "0.7"
       - "0.8"
       - "0.9"
+      - "5.8"
     node-maintenance-operator:
       - "5.0"
       - "5.2"
@@ -710,6 +713,7 @@ rule_data:
       - "5.5"
       - "5.6"
       - "5.7"
+      - "5.8"
     node-observability-operator:
       - "0.2"
     nova-operator:
@@ -1223,6 +1227,7 @@ rule_data:
       - "0.7"
       - "0.8"
       - "0.9"
+      - "5.8"
     serverless-operator:
       - "1.20"
       - "1.21"
@@ -1301,6 +1306,7 @@ rule_data:
     storage-based-remediation:
       - "0.2"
       - "0.3"
+      - "5.8"
     submariner:
       - "0.13"
       - "0.14"

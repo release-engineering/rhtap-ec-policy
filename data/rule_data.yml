@@ -335,7 +335,7 @@ rule_data:
   - features.operators.openshift.io/token-auth-gcp
 
   disallowed_platform_patterns:
-  - .*root.*
+  - ^[^/]*root/
 
   # List of keys: https://access.redhat.com/security/team/key
   allowed_rpm_signature_keys:

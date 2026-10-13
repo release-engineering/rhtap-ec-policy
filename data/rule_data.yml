@@ -215,6 +215,13 @@ rule_data:
     # https://github.com/hashicorp/vault-secrets-operator/blob/d462e563feeefbf10dc0637834f08e82e1d3f0c1/LICENSE#L7
     min: v0.2.0
 
+  allowed_package_sources:
+  - type: generic
+    patterns:
+    - '^https://mirror\.openshift\.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux\.tar\.gz$'
+    - '^https://mirror\.openshift\.com/pub/openshift-v4/aarch64/clients/ocp/stable/openshift-client-linux\.tar\.gz$'
+    - '^https://mirror\.openshift\.com/pub/cgw/oc-mirror/latest/oc-mirror-rhel9-linux-arm64\.tar\.gz$'
+
   # No binary python/ruby deps
   # https://conforma.dev/docs/policy/packages/release_sbom_cyclonedx.html#sbom_cyclonedx__disallowed_package_attributes
   disallowed_attributes:

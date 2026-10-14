@@ -5,6 +5,7 @@ rule_data:
   allowed_registry_prefixes:
   - registry.access.redhat.com/
   - registry.redhat.io/
+  - quay.io/konflux-ci/task-runner
   - quay.io/konflux-ci/yq
   - quay.io/konflux-ci/bazel5-ubi8
   - quay.io/konflux-ci/bazel6-ubi9

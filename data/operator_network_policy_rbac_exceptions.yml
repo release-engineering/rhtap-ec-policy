@@ -124,6 +124,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     cincinnati-operator:
       - "4.9"
       - "5.0"
@@ -589,6 +590,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     mcp-gateway:
       - "0.6"
     metallb-operator:
@@ -746,6 +748,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     ocs-operator:
       - "4.11"
       - "4.12"
@@ -759,8 +762,10 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     ocs-tls-profiles:
       - "4.22"
+      - "5.0"
     octavia-operator:
       - "1.0"
     odf-compose-operator:
@@ -781,16 +786,19 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odf-dependencies:
       - "4.18"
       - "4.19"
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odf-external-snapshotter-operator:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odf-multicluster-orchestrator:
       - "4.11"
       - "4.12"
@@ -804,6 +812,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odf-operator:
       - "4.11"
       - "4.12"
@@ -817,6 +826,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odf-prometheus-operator:
       - "4.16"
       - "4.17"
@@ -825,6 +835,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odr-cluster-operator:
       - "4.11"
       - "4.12"
@@ -838,6 +849,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odr-hub-operator:
       - "4.11"
       - "4.12"
@@ -851,8 +863,10 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     odr-volsync-plugin-operator:
       - "4.22"
+      - "5.0"
     openperouter-operator:
       - "4.21"
     openshift-builds-operator:
@@ -1041,6 +1055,7 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
+      - "5.0"
     red-hat-camel-k:
       - "1.10"
       - "1.4"

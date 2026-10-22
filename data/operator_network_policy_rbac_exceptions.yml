@@ -124,7 +124,6 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
-      - "5.0"
     cincinnati-operator:
       - "4.9"
       - "5.0"
@@ -590,7 +589,6 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
-      - "5.0"
     mcp-gateway:
       - "0.6"
     metallb-operator:
@@ -762,7 +760,6 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
-      - "5.0"
     ocs-tls-profiles:
       - "4.22"
       - "5.0"

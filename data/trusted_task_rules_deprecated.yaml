@@ -12,13 +12,6 @@ rule_data:
         # quay.io/konflux-ci/konflux-vanguard denied below effective Sep 24th 2026
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
 
-        # Todo: This is used by just one team, so it would be better to define
-        # a separate data source that can be referenced in registry-ose-osc-stage.yaml
-        # and registry-ose-osc.yaml in the konflux-release-data repo in
-        # config/stone-prd-rh01.pg1f.p1/product/EnterpriseContractPolicy
-        # Tracked in https://redhat.atlassian.net/browse/EC-2073
-        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
-
         # Todo: Similarly we're intending to move this matcher so it's only used for
         # the RoK builds, instead of everyone. Putting it here temporarily so RoK builds
         # continue to work after we cut over to the the new trusted task mechanism.
@@ -88,12 +81,3 @@ rule_data:
             Tasks under konflux-vanguard are no longer trusted.
             Use the equivalent from quay.io/konflux-ci/tekton-catalog instead.
           effective_on: "2026-09-24T00:00:00Z"
-
-
-        #-------------------------------------
-        # konflux-ci/ose-osc-tenant
-        #-------------------------------------
-
-        # build-dm-verity-image
-        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
-          versions: ['<0.1']

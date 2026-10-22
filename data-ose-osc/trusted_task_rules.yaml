@@ -1,0 +1,10 @@
+# Outside data/ so this rule is only loaded by the ose-osc ECPs.
+rule_data:
+  trusted_task_rules:
+    allow:
+      ose-osc:
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+    deny:
+      ose-osc:
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+          versions: ['<0.1']

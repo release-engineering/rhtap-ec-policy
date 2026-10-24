@@ -263,8 +263,8 @@ rule_data:
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__weekday_restriction
   disallowed_weekdays: 
   - friday
-  - saturday
-  - sunday
+  #- saturday
+  #- sunday
 
   # No releases on holidays and other shutdown dates.
   # https://conforma.dev/docs/policy/packages/release_schedule.html#schedule__date_restriction

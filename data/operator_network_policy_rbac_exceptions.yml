@@ -823,7 +823,6 @@ rule_data:
       - "4.20"
       - "4.21"
       - "4.22"
-      - "5.0"
     odf-prometheus-operator:
       - "4.16"
       - "4.17"

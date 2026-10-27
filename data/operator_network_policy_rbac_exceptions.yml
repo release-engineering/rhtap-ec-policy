@@ -159,6 +159,8 @@ rule_data:
       - "1.2"
       - "1.3"
       - "1.4"
+    cluster-power-manager:
+      - "5.1"
     clusterresourceoverride:
       - "4.12"
       - "4.13"

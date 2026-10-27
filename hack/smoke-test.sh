@@ -1,24 +1,33 @@
-#!/bin/bash -e
+#!/bin/bash
+set -euo pipefail
 
 POLICY=./hack/policy/smoketest.yaml
 #IMAGE=quay.io/konflux-ci/oras:latest
 IMAGE=quay.io/konflux-ci/ec-golden-image:latest
 
 # For the logs
-cosign tree $IMAGE
+cosign tree "$IMAGE"
 
-# Extract git details from the provenance
-gitexpression='.payload | @base64d | fromjson | .predicate.buildConfig.tasks[0].invocation.environment.annotations | ."pipelinesascode.tekton.dev/repo-url" + " " + ."pipelinesascode.tekton.dev/sha"'
-GITDETAILS=$(cosign download attestation $IMAGE | jq -r "${gitexpression}")
-GITREPO=$(echo $GITDETAILS | awk '{ print $1 }')
-GITREF=$(echo $GITDETAILS | awk '{ print $2 }')
+# Read the build-time image and Git source from the SLSA v1 provenance.
+if ! COMPONENT=$(cosign download attestation "$IMAGE" | jq -ec '
+  .payload | @base64d | fromjson |
+  .predicate.buildDefinition.externalParameters.runSpec.params as $params |
+  {
+    containerImage: ([$params[] | select(.name == "output-image") | .value][0]),
+    source: {git: {
+      url: ([$params[] | select(.name == "git-url") | .value][0]),
+      revision: ([$params[] | select(.name == "revision") | .value][0])
+    }}
+  } |
+  select(.containerImage != null and .containerImage != "" and
+         .source.git.url != null and .source.git.url != "" and
+         .source.git.revision != null and .source.git.revision != "")
+'); then
+  echo "❌ Could not extract image and Git source from the attestation." >&2
+  exit 1
+fi
 
-# Find the original location of the image at the time of attestation
-quayexpression='.payload | @base64d | fromjson | .subject[0].name'
-BUILDTIME_IMAGE=$(cosign download attestation $IMAGE | jq -r "${quayexpression}"):$GITREF
-
-# Build a JSON blob to verify
-IMAGEJSON=$(echo "{}" | jq '.components += [ {"containerImage": "'"$BUILDTIME_IMAGE"'", "source": {"git": {"revision": "'"${GITREF}"'", "url": "'"${GITREPO}"'"}}} ]')
+IMAGEJSON=$(jq -nc --argjson component "$COMPONENT" '{components: [$component]}')
 
 # And verify it.
 if ec validate --quiet image --images "${IMAGEJSON}" --ignore-rekor --policy "${POLICY}"; then

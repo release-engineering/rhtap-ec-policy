@@ -1046,7 +1046,6 @@ rule_data:
       - "3.7"
       - "3.8"
       - "3.9"
-      - "5.0"
     rabbitmq-cluster-operator:
       - "1.0"
     recipe:

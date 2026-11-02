@@ -8,17 +8,30 @@ IMAGE=quay.io/konflux-ci/ec-golden-image:latest
 # For the logs
 cosign tree "$IMAGE"
 
-# Read the build-time image and Git source from the SLSA v1 provenance.
+# Read the build-time image and Git source from either SLSA provenance format.
 if ! COMPONENT=$(cosign download attestation "$IMAGE" | jq -ec '
   .payload | @base64d | fromjson |
-  .predicate.buildDefinition.externalParameters.runSpec.params as $params |
-  {
-    containerImage: ([$params[] | select(.name == "output-image") | .value][0]),
-    source: {git: {
-      url: ([$params[] | select(.name == "git-url") | .value][0]),
-      revision: ([$params[] | select(.name == "revision") | .value][0])
-    }}
-  } |
+  (if .predicateType == "https://slsa.dev/provenance/v1" then
+    .predicate.buildDefinition.externalParameters.runSpec.params as $params |
+    {
+      containerImage: ([$params[] | select(.name == "output-image") | .value][0]),
+      source: {git: {
+        url: ([$params[] | select(.name == "git-url") | .value][0]),
+        revision: ([$params[] | select(.name == "revision") | .value][0])
+      }}
+    }
+  elif .predicateType == "https://slsa.dev/provenance/v0.2" then
+    .predicate.buildConfig.tasks[0].invocation.environment.annotations as $annotations |
+    (.subject[0].name // empty) as $image |
+    ($annotations."pipelinesascode.tekton.dev/sha" // empty) as $revision |
+    {
+      containerImage: ($image + ":" + $revision),
+      source: {git: {
+        url: $annotations."pipelinesascode.tekton.dev/repo-url",
+        revision: $revision
+      }}
+    }
+  else empty end) |
   select(.containerImage != null and .containerImage != "" and
          .source.git.url != null and .source.git.url != "" and
          .source.git.revision != null and .source.git.revision != "")

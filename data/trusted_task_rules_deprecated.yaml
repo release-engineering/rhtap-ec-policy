@@ -12,11 +12,14 @@ rule_data:
         # quay.io/konflux-ci/konflux-vanguard denied below effective Sep 24th 2026
         - pattern: oci://quay.io/konflux-ci/konflux-vanguard/*
 
-        # Todo: This is used by just one team, so it would be better to define
-        # a separate data source that can be referenced in registry-ose-osc-stage.yaml
-        # and registry-ose-osc.yaml in the konflux-release-data repo in
-        # config/stone-prd-rh01.pg1f.p1/product/EnterpriseContractPolicy
-        # Tracked in https://redhat.atlassian.net/browse/EC-2073
+        # Used by just one team, so this rule now lives in its own data source
+        # (data-ose-osc/trusted_task_rules.yaml) that the ose-osc ECPs reference
+        # directly. We keep the duplicate here temporarily to avoid a gap while the
+        # konflux-release-data MR rolls out; once registry-ose-osc.yaml and
+        # registry-ose-osc-stage.yaml in konflux-release-data pick up
+        # github.com/release-engineering/rhtap-ec-policy//data-ose-osc?ref=main
+        # this entry is dead code and is safe to remove.
+        # Removal tracked in https://redhat.atlassian.net/browse/EC-2407
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
 
         # Todo: Similarly we're intending to move this matcher so it's only used for
@@ -95,5 +98,9 @@ rule_data:
         #-------------------------------------
 
         # build-dm-verity-image
+        # Duplicated in data-ose-osc/trusted_task_rules.yaml (see the allow note
+        # above). Safe to remove once the konflux-release-data ose-osc ECPs pick up
+        # github.com/release-engineering/rhtap-ec-policy//data-ose-osc?ref=main.
+        # Removal tracked in https://redhat.atlassian.net/browse/EC-2407
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
           versions: ['<0.1']

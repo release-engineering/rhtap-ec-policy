@@ -18,6 +18,7 @@ rule_data:
         # config/stone-prd-rh01.pg1f.p1/product/EnterpriseContractPolicy
         # Tracked in https://redhat.atlassian.net/browse/EC-2073
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-s390x-task
 
     deny:
       konflux-defaults-deprecated:
@@ -87,4 +88,7 @@ rule_data:
 
         # build-dm-verity-image
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+          versions: ['<0.1']
+        # build-dm-verity-image-s390x
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-s390x-task
           versions: ['<0.1']

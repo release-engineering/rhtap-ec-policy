@@ -4,7 +4,10 @@ rule_data:
     allow:
       ose-osc:
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-s390x-task
     deny:
       ose-osc:
         - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-task
+          versions: ['<0.1']
+        - pattern: oci://quay.io/konflux-ci/ose-osc-tenant/build-dm-verity-image-s390x-task
           versions: ['<0.1']
